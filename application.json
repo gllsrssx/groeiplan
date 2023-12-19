@@ -7,10 +7,6 @@
     {
       "id": "Admin",
       "isDefault": false
-    },
-    {
-      "id": "Welcome",
-      "isDefault": false
     }
   ],
   "viewMode": false,
