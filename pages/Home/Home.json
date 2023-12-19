@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1030,
+          "bottomRow": 1770,
           "containerStyle": "none",
           "snapRows": 70,
           "parentRowSpace": 1,
@@ -26,6 +26,28 @@
           "leftColumn": 0
         },
         "layoutOnLoadActions": [
+          [
+            {
+              "id": "Home_get_active_competences",
+              "name": "get_active_competences",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.store.user._id"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Home_get_inactive_competences",
+              "name": "get_inactive_competences",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.store.user._id"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
           [
             {
               "id": "Home_Api_continue_google_login",

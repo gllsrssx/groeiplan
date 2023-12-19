@@ -1,7 +1,7 @@
 {
     "boxShadow": "none",
     "mobileBottomRow": 8,
-    "widgetName": "Text_history_desc",
+    "widgetName": "Text_competence_smart_action",
     "displayName": "Text",
     "iconSVG": "/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
     "searchTags": [
@@ -10,7 +10,7 @@
         "label"
     ],
     "topRow": 4,
-    "bottomRow": 8,
+    "bottomRow": 10,
     "type": "TEXT_WIDGET",
     "hideCard": false,
     "mobileRightColumn": 24,
@@ -19,28 +19,26 @@
     "dynamicTriggerPathList": [],
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "dynamicBindingPathList": [
-        {"key": "text"},
         {"key": "truncateButtonColor"},
         {"key": "fontFamily"},
-        {"key": "borderRadius"},
-        {"key": "text"}
+        {"key": "borderRadius"}
     ],
-    "leftColumn": 16,
+    "leftColumn": 7,
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "{{currentItem.id}}",
-    "key": "gneodfoiun",
+    "text": "smart actie?",
+    "key": "oda53wzzcw",
     "isDeprecated": false,
-    "rightColumn": 24,
+    "rightColumn": 64,
     "textAlign": "LEFT",
     "dynamicHeight": "FIXED",
-    "widgetId": "xf83k5a7lw",
+    "widgetId": "ns07x0ziv2",
     "minWidth": 450,
     "isVisible": true,
     "fontStyle": "BOLD",
     "textColor": "#231F20",
     "version": 1,
-    "parentId": "dxttwzkuai",
+    "parentId": "6103n4c8ab",
     "tags": [
         "Suggested",
         "Content"

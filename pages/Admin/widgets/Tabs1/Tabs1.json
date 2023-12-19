@@ -7,7 +7,7 @@
     "displayName": "Tabs",
     "iconSVG": "/static/media/icon.9e3d67c0af9c0bd092dc56240314e18a.svg",
     "topRow": 0,
-    "bottomRow": 49,
+    "bottomRow": 45,
     "parentRowSpace": 10,
     "type": "TABS_WIDGET",
     "hideCard": false,
@@ -122,7 +122,7 @@
     "widgetId": "gkd1c4q40m",
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
     "defaultTab": "{{appsmith.store.user?.isAdmin?\n'isAdmin':'isUser'}}",
-    "shouldShowTabs": true,
+    "shouldShowTabs": false,
     "minWidth": 450,
     "tabsObj": {
         "tab1": {
