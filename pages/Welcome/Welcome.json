@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Home",
-    "slug": "home",
+    "name": "Welcome",
+    "slug": "welcome",
     "layouts": [
       {
         "viewMode": false,
@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 540,
+          "bottomRow": 380,
           "containerStyle": "none",
           "snapRows": 70,
           "parentRowSpace": 1,
@@ -28,7 +28,7 @@
         "layoutOnLoadActions": [],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Home",
+        "id": "Welcome",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -39,5 +39,5 @@
     "isHidden": true
   },
   "deleted": false,
-  "gitSyncId": "65815cbedd2bbe1de86cce4d_65815dc1dd2bbe1de86cce51"
+  "gitSyncId": "65815cbedd2bbe1de86cce4d_658167c1dd2bbe1de86cce5d"
 }

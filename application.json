@@ -7,6 +7,10 @@
     {
       "id": "Admin",
       "isDefault": false
+    },
+    {
+      "id": "Welcome",
+      "isDefault": false
     }
   ],
   "viewMode": false,
@@ -14,7 +18,7 @@
   "unreadCommentThreads": 0,
   "unpublishedApplicationDetail": {
     "navigationSetting": {
-      "showNavbar": true,
+      "showNavbar": false,
       "orientation": "side",
       "navStyle": "sidebar",
       "position": "static",

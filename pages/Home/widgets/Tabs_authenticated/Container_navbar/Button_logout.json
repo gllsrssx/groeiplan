@@ -3,7 +3,9 @@
     "boxShadow": "none",
     "mobileBottomRow": 4,
     "widgetName": "Button_logout",
+    "onClick": "{{(()=>{\nstoreValue('user',undefined);\nnavigateTo('Home');\n})()}}",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+    "dynamicPropertyPathList": [{"key": "onClick"}],
     "displayName": "Button",
     "iconSVG": "/static/media/icon.05d209fafeb13a8569e3b4e97069d9ee.svg",
     "searchTags": [
@@ -18,8 +20,8 @@
     "mobileRightColumn": 64,
     "animateLoading": true,
     "parentColumnSpace": 14.78125,
-    "dynamicTriggerPathList": [],
-    "leftColumn": 55,
+    "dynamicTriggerPathList": [{"key": "onClick"}],
+    "leftColumn": 54,
     "dynamicBindingPathList": [
         {"key": "buttonColor"},
         {"key": "borderRadius"}
@@ -28,7 +30,7 @@
     "isDisabled": false,
     "key": "upyee4rz2q",
     "isDeprecated": false,
-    "rightColumn": 64,
+    "rightColumn": 63,
     "isDefaultClickDisabled": true,
     "widgetId": "7asdz07ibz",
     "minWidth": 120,

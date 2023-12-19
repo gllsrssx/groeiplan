@@ -7,7 +7,7 @@
     "displayName": "Tabs",
     "iconSVG": "/static/media/icon.9e3d67c0af9c0bd092dc56240314e18a.svg",
     "topRow": 0,
-    "bottomRow": 181,
+    "bottomRow": 54,
     "parentRowSpace": 10,
     "type": "TABS_WIDGET",
     "hideCard": false,
@@ -20,7 +20,8 @@
     "dynamicBindingPathList": [
         {"key": "accentColor"},
         {"key": "borderRadius"},
-        {"key": "boxShadow"}
+        {"key": "boxShadow"},
+        {"key": "defaultTab"}
     ],
     "children": [
         {
@@ -29,7 +30,7 @@
             "mobileBottomRow": 150,
             "widgetName": "Canvas1",
             "displayName": "Canvas",
-            "bottomRow": 1770,
+            "bottomRow": 1750,
             "topRow": 0,
             "parentRowSpace": 1,
             "type": "CANVAS_WIDGET",
@@ -73,7 +74,7 @@
             "mobileBottomRow": 150,
             "widgetName": "Canvas2",
             "displayName": "Canvas",
-            "bottomRow": 1770,
+            "bottomRow": 540,
             "topRow": 0,
             "parentRowSpace": 1,
             "type": "CANVAS_WIDGET",
@@ -121,8 +122,8 @@
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "a2wft86wec",
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-    "defaultTab": "Tab 1",
-    "shouldShowTabs": true,
+    "defaultTab": "{{\nappsmith.store.user?.email? 'authenticated': 'unauthenticated';\n}}",
+    "shouldShowTabs": false,
     "minWidth": 450,
     "tabsObj": {
         "tab1": {
@@ -154,6 +155,6 @@
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 0,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 181,
+    "originalBottomRow": 61,
     "minDynamicHeight": 15
 }
