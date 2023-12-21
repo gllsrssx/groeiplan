@@ -66,7 +66,7 @@
     "borderWidth": "0",
     "flexVerticalAlignment": "stretch",
     "key": "taclzi2dj4",
-    "backgroundColor": "#FFFFFF",
+    "backgroundColor": "transparent",
     "isDeprecated": false,
     "rightColumn": 64,
     "dynamicHeight": "AUTO_HEIGHT",

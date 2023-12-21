@@ -62,7 +62,7 @@
     "jsonPathKeys": [
       "appsmith.URL.queryParams.code"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],

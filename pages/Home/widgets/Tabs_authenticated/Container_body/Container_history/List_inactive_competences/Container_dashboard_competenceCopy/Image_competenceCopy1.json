@@ -22,7 +22,7 @@
     "key": "wn77t7n5co",
     "image": "{{currentItem.img}}",
     "isDeprecated": false,
-    "rightColumn": 10,
+    "rightColumn": 8,
     "objectFit": "contain",
     "widgetId": "y1g6tvdq4o",
     "isVisible": true,
