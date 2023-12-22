@@ -21,12 +21,13 @@
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
         {"key": "fontFamily"},
-        {"key": "borderRadius"}
+        {"key": "borderRadius"},
+        {"key": "text"}
     ],
     "leftColumn": 7,
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "smart actie?",
+    "text": "smart actie =>\n{{get_evaluations.data.filter(item => item.competenceId == currentItem._id)}}",
     "key": "oda53wzzcw",
     "isDeprecated": false,
     "rightColumn": 64,

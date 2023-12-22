@@ -28,7 +28,7 @@
     "leftColumn": 53,
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "{{currentItem.name}}",
+    "text": "{{currentItem.date}}",
     "key": "oda53wzzcw",
     "isDeprecated": false,
     "rightColumn": 63,

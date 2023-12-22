@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 820,
+          "bottomRow": 2280,
           "containerStyle": "none",
           "snapRows": 68,
           "parentRowSpace": 1,
@@ -28,18 +28,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Coaching_get_active_competences",
-              "name": "get_active_competences",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                " appsmith.store.user._id "
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "Coaching_Find_competences1",
               "name": "Find_competences1",
               "confirmBeforeExecute": false,
@@ -49,6 +37,17 @@
                 "Table_competences.pageOffset",
                 "{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t|| \"0\"\n}",
                 "Table_competences.pageSize"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Coaching_get_active_competences",
+              "name": "get_active_competences",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                " \n    { \n        \"userId\": -1, \n        \"focus\": -1,\n        ...(Table_competences.sortOrder.column ? { [Table_competences.sortOrder.column]: Table_competences.sortOrder.order !== \"desc\" ? 1 : -1 } : {}) \n    }\n",
+                " appsmith.store.user._id "
               ],
               "timeoutInMillisecond": 10000
             }

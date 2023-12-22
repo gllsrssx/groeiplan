@@ -25,7 +25,7 @@
         {"key": "borderRadius"},
         {"key": "text"}
     ],
-    "leftColumn": 62,
+    "leftColumn": 42,
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
     "text": "{{currentItem._id}}",

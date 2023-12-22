@@ -24,7 +24,8 @@
     "leftColumn": 20,
     "dynamicBindingPathList": [
         {"key": "buttonColor"},
-        {"key": "borderRadius"}
+        {"key": "borderRadius"},
+        {"key": "isVisible"}
     ],
     "text": "Dien je zelfevaluatie in",
     "isDisabled": false,
@@ -34,7 +35,7 @@
     "isDefaultClickDisabled": true,
     "widgetId": "ybnhmh4odp",
     "minWidth": 120,
-    "isVisible": "true",
+    "isVisible": "{{\n\tget_evaluations.data.filter(item => {\n\tconst threeWeeksAgo = new Date(new Date().getTime() - (3 * 7 * 24 * 60 * 60 * 1000));\n\treturn item.writer == appsmith.store.user._id && item.writer == item.userId && new Date(item.date) > threeWeeksAgo\n\t;}).length == 0\n}}\n",
     "recaptchaType": "V3",
     "version": 1,
     "parentId": "at9razgqj1",

@@ -26,7 +26,7 @@
     "leftColumn": 29,
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "smart actie?",
+    "text": "beschrijving?",
     "key": "oda53wzzcw",
     "isDeprecated": false,
     "rightColumn": 62,

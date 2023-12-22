@@ -69,7 +69,7 @@
             "data": "{{Table_competences.pageSize}}"
           },
           "projection": {
-            "data": "{img:0}"
+            "data": ""
           }
         },
         "insert": {

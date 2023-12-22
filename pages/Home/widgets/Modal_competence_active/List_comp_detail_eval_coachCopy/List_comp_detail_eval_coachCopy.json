@@ -86,7 +86,7 @@
     "currentItemsView": "{{[]}}",
     "triggeredItemView": "{{{}}}",
     "widgetName": "List_comp_detail_eval_coachCopy",
-    "listData": "{{\nget_evaluations.data.filter(item => item.writer != appsmith.store.user._id && item.competenceId === List_active_competences.triggeredItem._id)\n}}",
+    "listData": "{{\nget_evaluations.data.filter(item => item.writer == item.coachId && item.competenceId === List_active_competences.triggeredItem._id)\n}}",
     "displayName": "List",
     "bottomRow": 50,
     "parentRowSpace": 10,

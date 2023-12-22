@@ -31,7 +31,7 @@
     "text": "{{currentItem.name}}",
     "key": "anlmnxaxgv",
     "isDeprecated": false,
-    "rightColumn": 45,
+    "rightColumn": 42,
     "textAlign": "LEFT",
     "dynamicHeight": "FIXED",
     "widgetId": "1p3d013omz",

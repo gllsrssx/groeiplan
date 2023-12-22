@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "update_focus",
+    "name": "save_evaluation",
     "datasource": {
       "name": "GAP",
       "pluginId": "mongo-plugin",
@@ -28,11 +28,14 @@
             "data": ""
           }
         },
+        "body": {
+          "data": ""
+        },
         "collection": {
-          "data": "competences"
+          "data": "evaluations"
         },
         "command": {
-          "data": "UPDATE"
+          "data": "INSERT"
         },
         "count": {
           "query": {
@@ -74,12 +77,12 @@
         },
         "insert": {
           "documents": {
-            "data": ""
+            "data": "{{appsmith.store.coachEvaluation}}"
           }
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"update\": \"competences\",\n  \"updates\": [{\n    \"q\": {\"_id\": ObjectId('{{Text_comp_id.text}}')},\n    \"u\": {\"$set\": {\n    \"focus\": {{Switch_focus.isSwitchedOn}}\n  }},\n    \"multi\": false,\n  }]\n}\n",
+            "data": "{\n  \"insert\": \"evaluations\",\n  \"documents\": {{appsmith.store.coachEvaluation}}\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -91,10 +94,10 @@
             "data": "SINGLE"
           },
           "query": {
-            "data": "{\"_id\": ObjectId('{{Text_comp_id.text}}')}"
+            "data": ""
           },
           "update": {
-            "data": "{\"$set\": {\n    \"focus\": {{Switch_focus.isSwitchedOn}}\n  }}"
+            "data": ""
           }
         }
       }
@@ -102,26 +105,21 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "formData.updateMany.query.data"
-      },
-      {
-        "key": "formData.updateMany.update.data"
+        "key": "formData.insert.documents.data"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Switch_focus.isSwitchedOn",
-      "Text_comp_id.text"
+      "appsmith.store.coachEvaluation"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": [],
-    "createdAt": "2023-12-22T11:18:12Z"
+    "userPermissions": []
   },
-  "id": "Coaching_update_focus",
+  "id": "Coaching_save_evaluation",
   "deleted": false,
-  "gitSyncId": "65815cbedd2bbe1de86cce4d_65857074496d6514fbe92a05"
+  "gitSyncId": "65815cbedd2bbe1de86cce4d_658598b1496d6514fbe92a16"
 }
