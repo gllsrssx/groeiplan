@@ -103,7 +103,7 @@
     "rightColumn": 64,
     "widgetId": "b1wdpdzb6b",
     "minWidth": 450,
-    "onItemClick": "{{showModal('Modal_competence');}}",
+    "onItemClick": "{{showModal('Modal_competence_active');}}",
     "parentId": "wwe3795na6",
     "renderMode": "CANVAS",
     "mobileTopRow": 11,

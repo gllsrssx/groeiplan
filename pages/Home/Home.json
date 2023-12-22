@@ -62,6 +62,18 @@
           ],
           [
             {
+              "id": "Home_get_evaluations",
+              "name": "get_evaluations",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                " appsmith.store.user._id "
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "Home_JSObject_login.executeInOrder",
               "name": "JSObject_login.executeInOrder",
               "collectionId": "Home_JSObject_login",

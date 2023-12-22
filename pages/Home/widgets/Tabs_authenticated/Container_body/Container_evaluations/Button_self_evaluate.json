@@ -5,6 +5,7 @@
     "widgetName": "Button_self_evaluate",
     "onClick": "{{showModal('Modal_self_evaluation');}}",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+    "dynamicPropertyPathList": [{"key": "isVisible"}],
     "displayName": "Button",
     "iconSVG": "/static/media/icon.05d209fafeb13a8569e3b4e97069d9ee.svg",
     "searchTags": [
@@ -33,7 +34,7 @@
     "isDefaultClickDisabled": true,
     "widgetId": "ybnhmh4odp",
     "minWidth": 120,
-    "isVisible": true,
+    "isVisible": "true",
     "recaptchaType": "V3",
     "version": 1,
     "parentId": "at9razgqj1",

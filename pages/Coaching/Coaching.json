@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1860,
+          "bottomRow": 820,
           "containerStyle": "none",
           "snapRows": 68,
           "parentRowSpace": 1,
@@ -33,7 +33,22 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "Select_cubee.selectedOptionValue"
+                " appsmith.store.user._id "
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Coaching_Find_competences1",
+              "name": "Find_competences1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                " \n    { \n        \"active\": -1, \n        \"focus\": -1,\n        ...(Table_competences.sortOrder.column ? { [Table_competences.sortOrder.column]: Table_competences.sortOrder.order !== \"desc\" ? 1 : -1 } : {}) \n    }\n",
+                "Table_competences.pageOffset",
+                "{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t|| \"0\"\n}",
+                "Table_competences.pageSize"
               ],
               "timeoutInMillisecond": 10000
             }
@@ -46,6 +61,27 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "{ \n\tname: {$regex: Select_cubee.filterText, '$options' : 'i'},\n\tcoachId: appsmith.store.user._id\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Coaching_Total_record_competences1",
+              "name": "Total_record_competences1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "{ name: {$regex: Table1.searchText} }",
+                "{ name: {$regex: Table_competences.searchText} }"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Coaching_get_evaluations",
+              "name": "get_evaluations",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "{\n\tuserId: Select_cubee.selectedOptionValue,\n\tfeedback: { \"$ne\": \"\" }\n}"
               ],
               "timeoutInMillisecond": 10000
             }

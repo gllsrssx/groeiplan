@@ -31,6 +31,9 @@
   },
   "color": "#C7F3F0",
   "icon": "flag",
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
   "unpublishedCustomJSLibs": [],
   "publishedCustomJSLibs": [],
   "evaluationVersion": 2,

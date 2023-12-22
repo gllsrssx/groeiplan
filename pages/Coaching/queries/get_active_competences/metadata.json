@@ -60,10 +60,10 @@
             "data": ""
           },
           "query": {
-            "data": "{\n\t\"userId\": \"{{Select_cubee.selectedOptionValue}}\",\n\t\"active\": true\n}"
+            "data": "{\n  \"userId\": {\n    \"$in\": [\n      {{ appsmith.store.user._id }},\n      \"0\"\n    ]\n  },\n  \"active\": true\n}\n"
           },
           "sort": {
-            "data": ""
+            "data": "{userId: -1}"
           },
           "limit": {
             "data": ""
@@ -79,7 +79,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {\n\t\"userId\": \"{{Select_cubee.selectedOptionValue}}\",\n\t\"active\": true\n},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
+            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {\n  \"userId\": {\n    \"$in\": [\n      {{ appsmith.store.user._id }},\n      \"0\"\n    ]\n  },\n  \"active\": true\n}\n,\n  \"sort\": {userId: -1},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -109,7 +109,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Select_cubee.selectedOptionValue"
+      " appsmith.store.user._id "
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

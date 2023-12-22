@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject_run_gets",
+    "pageId": "Coaching",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Coaching_JSObject_run_gets",
+  "deleted": false,
+  "gitSyncId": "65815cbedd2bbe1de86cce4d_6584434b496d6514fbe929e7"
+}

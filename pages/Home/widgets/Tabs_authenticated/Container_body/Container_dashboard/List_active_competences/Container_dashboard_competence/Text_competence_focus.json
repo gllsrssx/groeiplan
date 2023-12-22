@@ -28,7 +28,7 @@
     "leftColumn": 59,
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "{{currentItem.Focus? 'Focus':''}}",
+    "text": "{{currentItem.focus? 'Focus':''}}",
     "key": "oda53wzzcw",
     "isDeprecated": false,
     "rightColumn": 64,

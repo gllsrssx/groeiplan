@@ -13,7 +13,7 @@
     ],
     "labelStyle": "",
     "inputType": "MULTI_LINE_TEXT",
-    "placeholderText": "wat heb je hiervoor gedaan?",
+    "placeholderText": "wat heb je hier voor gedaan en evalueer jezelf",
     "isDisabled": false,
     "isRequired": true,
     "dynamicHeight": "AUTO_HEIGHT",

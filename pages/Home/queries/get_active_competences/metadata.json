@@ -60,10 +60,10 @@
             "data": ""
           },
           "query": {
-            "data": "{\n\t\"userId\": \"{{appsmith.store.user._id}}\",\n\t\"active\": true\n}"
+            "data": "{\n\tuserId : {{appsmith.store.user._id}},\n\tactive: true\n}\n"
           },
           "sort": {
-            "data": ""
+            "data": "{focus:-1}"
           },
           "limit": {
             "data": ""
@@ -79,7 +79,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {\n\t\"userId\": \"{{appsmith.store.user._id}}\",\n\t\"active\": true\n},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
+            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {\n\tuserId : {{appsmith.store.user._id}},\n\tactive: true\n}\n,\n  \"sort\": {focus:-1},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },

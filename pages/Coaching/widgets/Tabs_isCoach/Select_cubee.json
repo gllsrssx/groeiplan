@@ -59,6 +59,6 @@
     "mobileLeftColumn": 0,
     "maxDynamicHeight": 9000,
     "onFilterUpdate": "{{\n            Find_users1.run();\n            \n          }}",
-    "onOptionChange": "{{get_active_competences.run()}}",
+    "onOptionChange": "{{JSObject_run_gets.myFun1();}}",
     "minDynamicHeight": 4
 }

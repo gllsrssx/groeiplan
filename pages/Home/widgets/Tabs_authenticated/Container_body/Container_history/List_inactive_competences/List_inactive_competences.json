@@ -103,7 +103,7 @@
     "rightColumn": 64,
     "widgetId": "8cf4k4cive",
     "minWidth": 450,
-    "onItemClick": "{{showModal('Modal_competence');}}",
+    "onItemClick": "{{showModal('Modal_competence_inactive');}}",
     "parentId": "h8we9403kp",
     "renderMode": "CANVAS",
     "mobileTopRow": 11,
