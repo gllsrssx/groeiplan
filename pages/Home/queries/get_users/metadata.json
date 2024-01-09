@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "get_inactive_competences",
+    "name": "get_users",
     "datasource": {
       "name": "GAP",
       "pluginId": "mongo-plugin",
@@ -13,11 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Coaching",
+    "pageId": "Home",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
+      "body": "{\n  \"find\": \"users\",\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
       "selfReferencingDataPaths": [],
       "formData": {
         "aggregate": {
@@ -29,7 +30,7 @@
           }
         },
         "collection": {
-          "data": "competences"
+          "data": "users"
         },
         "command": {
           "data": "FIND"
@@ -60,7 +61,7 @@
             "data": ""
           },
           "query": {
-            "data": "{\n\t\"userId\": \"{{Select_cubee.selectedOptionValue}}\",\n\t\"active\": false\n}"
+            "data": ""
           },
           "sort": {
             "data": ""
@@ -79,7 +80,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {\n\t\"userId\": \"{{Select_cubee.selectedOptionValue}}\",\n\t\"active\": false\n},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
+            "data": "{\n  \"find\": \"users\",\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -99,25 +100,19 @@
         }
       }
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [
-      {
-        "key": "formData.find.query.data"
-      }
-    ],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "Select_cubee.selectedOptionValue"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-12-21T13:52:34Z"
+    "createdAt": "2024-01-09T10:36:11Z"
   },
-  "id": "Coaching_get_inactive_competences",
+  "id": "Home_get_users",
   "deleted": false,
-  "gitSyncId": "65815cbedd2bbe1de86cce4d_65844322496d6514fbe929e1"
+  "gitSyncId": "65815cbedd2bbe1de86cce4d_659d219b496d6514fbe92a3f"
 }

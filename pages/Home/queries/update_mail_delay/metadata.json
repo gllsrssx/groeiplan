@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "get_inactive_competences",
+    "name": "update_mail_delay",
     "datasource": {
       "name": "GAP",
       "pluginId": "mongo-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Coaching",
+    "pageId": "Home",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -28,11 +28,14 @@
             "data": ""
           }
         },
+        "body": {
+          "data": "{\n  \"update\": \"users\",\n  \"updates\": [\n    {\n      \"q\": { \"_id\": { \"$oid\": \"{{send_emails.userId}}\" } },\n      \"u\": { \"$set\": { \"lastEmailSent\": { \"$date\" : \"{{send_emails.now}}\"} } },\n      \"upsert\": true\n    }\n  ]\n}\n"
+        },
         "collection": {
-          "data": "competences"
+          "data": ""
         },
         "command": {
-          "data": "FIND"
+          "data": "RAW"
         },
         "count": {
           "query": {
@@ -60,7 +63,7 @@
             "data": ""
           },
           "query": {
-            "data": "{\n\t\"userId\": \"{{Select_cubee.selectedOptionValue}}\",\n\t\"active\": false\n}"
+            "data": ""
           },
           "sort": {
             "data": ""
@@ -75,12 +78,6 @@
         "insert": {
           "documents": {
             "data": ""
-          }
-        },
-        "misc": {
-          "formToNativeQuery": {
-            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {\n\t\"userId\": \"{{Select_cubee.selectedOptionValue}}\",\n\t\"active\": false\n},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
-            "status": "SUCCESS"
           }
         },
         "smartSubstitution": {
@@ -99,25 +96,26 @@
         }
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "formData.find.query.data"
+        "key": "formData.body.data"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Select_cubee.selectedOptionValue"
+      "send_emails.now",
+      "send_emails.userId"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-12-21T13:52:34Z"
+    "createdAt": "2024-01-09T10:38:24Z"
   },
-  "id": "Coaching_get_inactive_competences",
+  "id": "Home_update_mail_delay",
   "deleted": false,
-  "gitSyncId": "65815cbedd2bbe1de86cce4d_65844322496d6514fbe929e1"
+  "gitSyncId": "65815cbedd2bbe1de86cce4d_659d2220496d6514fbe92a41"
 }

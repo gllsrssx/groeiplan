@@ -68,25 +68,25 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1703259356116,
+    "columnUpdatedAt": 1704793493248,
     "primaryColumnId": "_id",
     "defaultSelectedRowIndices": [0],
     "mobileBottomRow": 28,
     "widgetName": "Table_competences",
     "defaultPageSize": 0,
     "columnOrder": [
+        "focus",
         "name",
         "description",
         "img",
         "_id",
         "userId",
-        "focus",
         "active"
     ],
     "dynamicPropertyPathList": [],
     "compactMode": "SHORT",
     "displayName": "Table",
-    "bottomRow": 54,
+    "bottomRow": 53,
     "columnWidthMap": {
         "img": 267,
         "name": 192,
@@ -113,7 +113,7 @@
     "primaryColumns": {
         "img": {
             "computedValue": "{{Table_competences.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"img\"]))}}",
-            "isEditable": false,
+            "isEditable": true,
             "notation": "standard",
             "alias": "img",
             "enableSort": true,
@@ -135,7 +135,7 @@
             "columnType": "text",
             "thousandSeparator": true,
             "horizontalAlignment": "LEFT",
-            "isCellEditable": false,
+            "isCellEditable": true,
             "decimals": 0,
             "width": 150,
             "enableFilter": true,

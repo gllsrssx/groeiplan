@@ -10,12 +10,12 @@
         "label"
     ],
     "topRow": 4,
-    "bottomRow": 10,
+    "bottomRow": 12,
     "type": "TEXT_WIDGET",
     "hideCard": false,
     "mobileRightColumn": 24,
     "animateLoading": true,
-    "overflow": "NONE",
+    "overflow": "TRUNCATE",
     "dynamicTriggerPathList": [],
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "dynamicBindingPathList": [
@@ -27,7 +27,7 @@
     "leftColumn": 7,
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "smart actie =>\n{{get_evaluations.data.filter(item => item.competenceId == currentItem._id)}}",
+    "text": "{{(get_evaluations.data\n  .filter(item => item.competenceId === currentItem._id)\n  .sort((a, b) => new Date(b.date) - new Date(a.date))\n  .map(item => item.smart)[0] ? \"smart actie => \\n\" : \"\") + (get_evaluations.data\n  .filter(item => item.competenceId === currentItem._id)\n  .sort((a, b) => new Date(b.date) - new Date(a.date))\n  .map(item => item.smart)[0] || 'Nog geen smart acties')}}",
     "key": "oda53wzzcw",
     "isDeprecated": false,
     "rightColumn": 64,

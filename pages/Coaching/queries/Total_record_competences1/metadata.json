@@ -43,7 +43,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"count\": \"competences\",\n  \"query\": {{{ name: {$regex: Table1.searchText} }}},\n}\n",
+            "data": "{\n  \"count\": \"competences\",\n  \"query\": {{{ name: {$regex: Table_competences.searchText} }}},\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -57,7 +57,7 @@
         }
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "formData.count.query.data"
@@ -67,7 +67,6 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "{ name: {$regex: Table1.searchText} }",
       "{ name: {$regex: Table_competences.searchText} }"
     ],
     "userSetOnLoad": false,

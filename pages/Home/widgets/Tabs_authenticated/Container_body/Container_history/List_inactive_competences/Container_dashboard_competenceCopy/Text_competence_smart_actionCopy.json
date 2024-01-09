@@ -21,12 +21,13 @@
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
         {"key": "fontFamily"},
-        {"key": "borderRadius"}
+        {"key": "borderRadius"},
+        {"key": "text"}
     ],
     "leftColumn": 29,
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "beschrijving?",
+    "text": "beschrijving? {{\"\\n\\n\"+currentItem.description}}",
     "key": "oda53wzzcw",
     "isDeprecated": false,
     "rightColumn": 62,

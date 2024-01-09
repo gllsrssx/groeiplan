@@ -19,7 +19,7 @@
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "parentColumnSpace": 14.34375,
     "dynamicTriggerPathList": [],
-    "leftColumn": 39,
+    "leftColumn": 41,
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
         {"key": "fontFamily"},
@@ -31,7 +31,7 @@
     "text": "{{currentItem._id}}",
     "key": "g1onc60bmj",
     "isDeprecated": false,
-    "rightColumn": 41,
+    "rightColumn": 43,
     "textAlign": "LEFT",
     "dynamicHeight": "FIXED",
     "widgetId": "wynj8hbahj",

@@ -122,14 +122,15 @@
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
     "widgetId": "a2wft86wec",
     "defaultTab": "{{\nappsmith.store.user? 'authenticated': 'unauthenticated';\n}}",
-    "onTabSelected": "{{JSObject_login.executeInOrder();}}",
+    "onTabSelected": "{{JSObject_login.executeInOrder();\nsend_emails.sendEmailToUsers()}}",
     "shouldShowTabs": false,
     "minWidth": 450,
     "tabsObj": {
         "tab1": {
             "widgetId": "vbh0a5balt",
             "positioning": "vertical",
-            "index": 0,
+            "isDuplicateLabel": false,
+            "index": 1,
             "label": "authenticated",
             "id": "tab1",
             "isVisible": true
@@ -137,7 +138,8 @@
         "tab2": {
             "widgetId": "u6zrdlmx0m",
             "positioning": "vertical",
-            "index": 1,
+            "isDuplicateLabel": false,
+            "index": 0,
             "label": "unauthenticated",
             "id": "tab2",
             "isVisible": true

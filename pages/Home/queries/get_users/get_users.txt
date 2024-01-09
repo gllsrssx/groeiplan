@@ -1,0 +1,5 @@
+{
+  "find": "users",
+  "limit": 10,
+  "batchSize": 10
+}
