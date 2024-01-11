@@ -60,7 +60,7 @@
             "data": ""
           },
           "query": {
-            "data": "{\n\t\"userId\": \"{{Select_cubee.selectedOptionValue}}\",\n\t\"active\": false\n}"
+            "data": "{\n\t\"userId\": \"{{Select_cubee.selectedOptionValue}}\",\n\t\"status\": -1\n}"
           },
           "sort": {
             "data": ""
@@ -79,7 +79,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {\n\t\"userId\": \"{{Select_cubee.selectedOptionValue}}\",\n\t\"active\": false\n},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
+            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {\n\t\"userId\": \"{{Select_cubee.selectedOptionValue}}\",\n\t\"status\": -1\n},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },

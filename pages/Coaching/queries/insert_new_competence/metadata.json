@@ -74,12 +74,12 @@
         },
         "insert": {
           "documents": {
-            "data": "{{[{name:Input1.text, description : Input2.text, focus: Switch1.isSwitchedOn, userId: Select_cubee.selectedOptionValue, img: FilePicker1.files[0]?.data.toString() }]}}"
+            "data": "{{[{name:Input1.text, description : Input2.text, focus: Switch1.isSwitchedOn, userId: Select_cubee.selectedOptionValue, status: 0, img: FilePicker1.files[0]?.data?.toString()?FilePicker1.files[0].data.toString() :'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVoZd9rcX9foe2rH5PIurf93uzksmqZJ2w6OTQa-NIzH_wAVfccPcun1JgKo51wtU-HAI&usqp=CAU' }]}}"
           }
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"insert\": \"competences\",\n  \"documents\": {{[{name:Input1.text, description : Input2.text, focus: Switch1.isSwitchedOn, userId: Select_cubee.selectedOptionValue, img: FilePicker1.files[0]?.data.toString() }]}}\n}\n",
+            "data": "{\n  \"insert\": \"competences\",\n  \"documents\": {{[{name:Input1.text, description : Input2.text, focus: Switch1.isSwitchedOn, userId: Select_cubee.selectedOptionValue, status: 0, img: FilePicker1.files[0]?.data?.toString()?FilePicker1.files[0].data.toString() :'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVoZd9rcX9foe2rH5PIurf93uzksmqZJ2w6OTQa-NIzH_wAVfccPcun1JgKo51wtU-HAI&usqp=CAU' }]}}\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -109,7 +109,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "[{name:Input1.text, description : Input2.text, focus: Switch1.isSwitchedOn, userId: Select_cubee.selectedOptionValue, img: FilePicker1.files[0]?.data.toString() }]"
+      "[{name:Input1.text, description : Input2.text, focus: Switch1.isSwitchedOn, userId: Select_cubee.selectedOptionValue, status: 0, img: FilePicker1.files[0]?.data?.toString()?FilePicker1.files[0].data.toString() :'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVoZd9rcX9foe2rH5PIurf93uzksmqZJ2w6OTQa-NIzH_wAVfccPcun1JgKo51wtU-HAI&usqp=CAU' }]"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
