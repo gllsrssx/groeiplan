@@ -10,7 +10,7 @@
         "label"
     ],
     "topRow": 0,
-    "bottomRow": 5,
+    "bottomRow": 8,
     "type": "TEXT_WIDGET",
     "hideCard": false,
     "mobileRightColumn": 24,
@@ -31,7 +31,7 @@
     "text": "{{currentItem.score}}",
     "key": "oda53wzzcw",
     "isDeprecated": false,
-    "rightColumn": 9,
+    "rightColumn": 10,
     "textAlign": "LEFT",
     "dynamicHeight": "FIXED",
     "widgetId": "i8y7d6jrrq",

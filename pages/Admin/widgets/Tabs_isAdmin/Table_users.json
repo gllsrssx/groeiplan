@@ -22,7 +22,8 @@
         {"key": "primaryColumns.email.computedValue"},
         {"key": "primaryColumns.token.computedValue"},
         {"key": "primaryColumns.coachId.computedValue"},
-        {"key": "primaryColumns.coachId.selectOptions"}
+        {"key": "primaryColumns.coachId.selectOptions"},
+        {"key": "primaryColumns.lastEmailSent.computedValue"}
     ],
     "needsHeightForContent": true,
     "leftColumn": 0,
@@ -67,7 +68,7 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1703164532969,
+    "columnUpdatedAt": 1704799346400,
     "primaryColumnId": "_id",
     "defaultSelectedRowIndices": [0],
     "mobileBottomRow": 27,
@@ -79,7 +80,8 @@
         "email",
         "coachId",
         "token",
-        "_id"
+        "_id",
+        "lastEmailSent"
     ],
     "dynamicPropertyPathList": [],
     "compactMode": "DEFAULT",
@@ -103,6 +105,37 @@
     ],
     "borderWidth": "1",
     "primaryColumns": {
+        "lastEmailSent": {
+            "computedValue": "{{Table_users.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"lastEmailSent\"]))}}",
+            "isEditable": false,
+            "notation": "standard",
+            "alias": "lastEmailSent",
+            "enableSort": true,
+            "isSaveVisible": true,
+            "id": "lastEmailSent",
+            "isDisabled": false,
+            "allowSameOptionsInNewRow": true,
+            "validation": {},
+            "isCellVisible": true,
+            "isDerived": false,
+            "textSize": "0.875rem",
+            "allowCellWrapping": false,
+            "index": 0,
+            "isDiscardVisible": true,
+            "isVisible": true,
+            "label": "lastEmailSent",
+            "columnType": "date",
+            "thousandSeparator": true,
+            "horizontalAlignment": "LEFT",
+            "isCellEditable": false,
+            "decimals": 0,
+            "width": 150,
+            "enableFilter": true,
+            "sticky": "",
+            "originalId": "lastEmailSent",
+            "currencyCode": "USD",
+            "verticalAlignment": "CENTER"
+        },
         "name": {
             "computedValue": "{{Table_users.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
             "onSubmit": "{{Update_users1.run()}}",

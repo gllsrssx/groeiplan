@@ -63,7 +63,7 @@
             "data": "{{{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t|| \"0\"\n}}}"
           },
           "sort": {
-            "data": "{{ \n    { \n        \"active\": -1, \n        \"focus\": -1,\n        ...(Table_competences.sortOrder.column ? { [Table_competences.sortOrder.column]: Table_competences.sortOrder.order !== \"desc\" ? 1 : -1 } : {}) \n    }\n}}"
+            "data": "{{ \n    { \n        \"archive\": -1, \n        \"active\": -1, \n        \"focus\": -1,\n        ...(Table_competences.sortOrder.column ? { [Table_competences.sortOrder.column]: Table_competences.sortOrder.order !== \"desc\" ? 1 : -1 } : {}) \n    }\n}}"
           },
           "limit": {
             "data": "{{Table_competences.pageSize}}"
@@ -79,7 +79,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {{{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t|| \"0\"\n}}},\n  \"sort\": {{ \n    { \n        \"active\": -1, \n        \"focus\": -1,\n        ...(Table_competences.sortOrder.column ? { [Table_competences.sortOrder.column]: Table_competences.sortOrder.order !== \"desc\" ? 1 : -1 } : {}) \n    }\n}},\n  \"skip\": {{Table_competences.pageOffset}},\n  \"limit\": {{Table_competences.pageSize}},\n  \"batchSize\": {{Table_competences.pageSize}}\n}\n",
+            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {{{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t|| \"0\"\n}}},\n  \"sort\": {{ \n    { \n        \"archive\": -1, \n        \"active\": -1, \n        \"focus\": -1,\n        ...(Table_competences.sortOrder.column ? { [Table_competences.sortOrder.column]: Table_competences.sortOrder.order !== \"desc\" ? 1 : -1 } : {}) \n    }\n}},\n  \"skip\": {{Table_competences.pageOffset}},\n  \"limit\": {{Table_competences.pageSize}},\n  \"batchSize\": {{Table_competences.pageSize}}\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -99,7 +99,7 @@
         }
       }
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "formData.find.skip.data"
@@ -118,7 +118,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      " \n    { \n        \"active\": -1, \n        \"focus\": -1,\n        ...(Table_competences.sortOrder.column ? { [Table_competences.sortOrder.column]: Table_competences.sortOrder.order !== \"desc\" ? 1 : -1 } : {}) \n    }\n",
+      " \n    { \n        \"archive\": -1, \n        \"active\": -1, \n        \"focus\": -1,\n        ...(Table_competences.sortOrder.column ? { [Table_competences.sortOrder.column]: Table_competences.sortOrder.order !== \"desc\" ? 1 : -1 } : {}) \n    }\n",
       "Table_competences.pageOffset",
       "Table_competences.pageSize",
       "{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t|| \"0\"\n}"

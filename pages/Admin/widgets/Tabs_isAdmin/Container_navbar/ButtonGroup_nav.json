@@ -4,7 +4,6 @@
     "widgetName": "ButtonGroup_nav",
     "isCanvas": false,
     "dynamicPropertyPathList": [
-        {"key": "groupButtons.groupButton1.isVisible"},
         {"key": "groupButtons.groupButtonimbbke7ehc.isVisible"},
         {"key": "groupButtons.groupButton2.isVisible"}
     ],
@@ -90,7 +89,7 @@
             "menuItems": {},
             "index": 2,
             "label": "Admin",
-            "isVisible": "{{\n\tappsmith.store.user?.isAdmin? true: false\n}}",
+            "isVisible": false,
             "buttonType": "SIMPLE",
             "iconAlign": "left",
             "id": "groupButton1",
@@ -122,14 +121,13 @@
         {"key": "groupButtons.groupButtonimbbke7ehc.onClick"},
         {"key": "groupButtons.groupButton2.onClick"}
     ],
-    "leftColumn": 26,
+    "leftColumn": 29,
     "dynamicBindingPathList": [
         {"key": "borderRadius"},
         {"key": "groupButtons.groupButton1.buttonColor"},
         {"key": "groupButtons.groupButton2.buttonColor"},
         {"key": "groupButtons.groupButton3.buttonColor"},
         {"key": "groupButtons.groupButtonimbbke7ehc.buttonColor"},
-        {"key": "groupButtons.groupButton1.isVisible"},
         {"key": "groupButtons.groupButtonimbbke7ehc.isVisible"},
         {"key": "groupButtons.groupButton2.isVisible"}
     ],

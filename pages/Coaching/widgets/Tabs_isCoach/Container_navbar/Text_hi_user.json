@@ -31,7 +31,7 @@
     "text": "Hi, {{appsmith.store.user.name}}",
     "key": "oda53wzzcw",
     "isDeprecated": false,
-    "rightColumn": 23,
+    "rightColumn": 28,
     "textAlign": "LEFT",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "d0c89st8vn",
@@ -53,7 +53,7 @@
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 13,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 8,
+    "originalBottomRow": 5,
     "fontSize": "1rem",
     "minDynamicHeight": 4
 }

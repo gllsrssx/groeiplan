@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "get_inactive_competences",
+    "name": "insert_new_competence",
     "datasource": {
       "name": "GAP",
       "pluginId": "mongo-plugin",
@@ -32,7 +32,7 @@
           "data": "competences"
         },
         "command": {
-          "data": "FIND"
+          "data": "INSERT"
         },
         "count": {
           "query": {
@@ -60,7 +60,7 @@
             "data": ""
           },
           "query": {
-            "data": "{\n\t\"userId\": \"{{Select_cubee.selectedOptionValue}}\",\n\t\"active\": false\n}"
+            "data": ""
           },
           "sort": {
             "data": ""
@@ -74,12 +74,12 @@
         },
         "insert": {
           "documents": {
-            "data": ""
+            "data": "{{[{name:Input1.text, description : Input2.text, focus: Switch1.isSwitchedOn, userId: Select_cubee.selectedOptionValue, img: FilePicker1.files[0]?.data?FilePicker1.files[0].data:\"\" }]}}"
           }
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {\n\t\"userId\": \"{{Select_cubee.selectedOptionValue}}\",\n\t\"active\": false\n},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
+            "data": "{\n  \"insert\": \"competences\",\n  \"documents\": {{[{name:Input1.text, description : Input2.text, focus: Switch1.isSwitchedOn, userId: Select_cubee.selectedOptionValue, img: FilePicker1.files[0]?.data?FilePicker1.files[0].data:\"\" }]}}\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -102,22 +102,22 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "formData.find.query.data"
+        "key": "formData.insert.documents.data"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Select_cubee.selectedOptionValue"
+      "[{name:Input1.text, description : Input2.text, focus: Switch1.isSwitchedOn, userId: Select_cubee.selectedOptionValue, img: FilePicker1.files[0]?.data?FilePicker1.files[0].data:\"\" }]"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-12-21T13:52:34Z"
+    "createdAt": "2024-01-09T14:49:40Z"
   },
-  "id": "Coaching_get_inactive_competences",
+  "id": "Coaching_insert_new_competence",
   "deleted": false,
-  "gitSyncId": "65815cbedd2bbe1de86cce4d_65844322496d6514fbe929e1"
+  "gitSyncId": "65815cbedd2bbe1de86cce4d_659d5d042897a24102bd93d3"
 }

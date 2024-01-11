@@ -25,14 +25,14 @@
         {"key": "borderRadius"},
         {"key": "text"}
     ],
-    "leftColumn": 59,
+    "leftColumn": 58,
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
     "text": "{{currentItem.focus? 'Focus':''}}",
     "key": "oda53wzzcw",
     "isDeprecated": false,
-    "rightColumn": 64,
-    "textAlign": "LEFT",
+    "rightColumn": 63,
+    "textAlign": "RIGHT",
     "dynamicHeight": "FIXED",
     "widgetId": "68uf0b4jh7",
     "minWidth": 450,
@@ -52,7 +52,7 @@
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 16,
     "maxDynamicHeight": 9000,
-    "fontSize": "1rem",
+    "fontSize": "1.25rem",
     "textStyle": "HEADING",
     "minDynamicHeight": 4
 }

@@ -7,7 +7,7 @@
     "displayName": "Tabs",
     "iconSVG": "/static/media/icon.9e3d67c0af9c0bd092dc56240314e18a.svg",
     "topRow": 0,
-    "bottomRow": 228,
+    "bottomRow": 105,
     "parentRowSpace": 10,
     "type": "TABS_WIDGET",
     "hideCard": false,
@@ -29,7 +29,7 @@
             "mobileBottomRow": 150,
             "widgetName": "Canvas1",
             "displayName": "Canvas",
-            "bottomRow": 2280,
+            "bottomRow": 1050,
             "topRow": 0,
             "parentRowSpace": 1,
             "type": "CANVAS_WIDGET",
@@ -73,7 +73,7 @@
             "mobileBottomRow": 150,
             "widgetName": "Canvas2",
             "displayName": "Canvas",
-            "bottomRow": 2280,
+            "bottomRow": 1050,
             "topRow": 0,
             "parentRowSpace": 1,
             "type": "CANVAS_WIDGET",
@@ -128,7 +128,8 @@
         "tab1": {
             "widgetId": "hywwfrtyyb",
             "positioning": "vertical",
-            "index": 0,
+            "isDuplicateLabel": false,
+            "index": 1,
             "label": "isCoach",
             "id": "tab1",
             "isVisible": true
@@ -136,7 +137,8 @@
         "tab2": {
             "widgetId": "uliy2kny83",
             "positioning": "vertical",
-            "index": 1,
+            "isDuplicateLabel": false,
+            "index": 0,
             "label": "isNotCoach",
             "id": "tab2",
             "isVisible": true
@@ -154,6 +156,6 @@
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 0,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 228,
+    "originalBottomRow": 105,
     "minDynamicHeight": 15
 }

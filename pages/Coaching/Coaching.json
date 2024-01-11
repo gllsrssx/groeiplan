@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 2280,
+          "bottomRow": 1050,
           "containerStyle": "none",
           "snapRows": 68,
           "parentRowSpace": 1,
@@ -33,7 +33,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                " \n    { \n        \"active\": -1, \n        \"focus\": -1,\n        ...(Table_competences.sortOrder.column ? { [Table_competences.sortOrder.column]: Table_competences.sortOrder.order !== \"desc\" ? 1 : -1 } : {}) \n    }\n",
+                " \n    { \n        \"archive\": -1, \n        \"active\": -1, \n        \"focus\": -1,\n        ...(Table_competences.sortOrder.column ? { [Table_competences.sortOrder.column]: Table_competences.sortOrder.order !== \"desc\" ? 1 : -1 } : {}) \n    }\n",
                 "Table_competences.pageOffset",
                 "{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t|| \"0\"\n}",
                 "Table_competences.pageSize"
@@ -69,7 +69,6 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "{ name: {$regex: Table1.searchText} }",
                 "{ name: {$regex: Table_competences.searchText} }"
               ],
               "timeoutInMillisecond": 10000

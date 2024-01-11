@@ -16,13 +16,12 @@
     "mobileRightColumn": 39,
     "animateLoading": true,
     "overflow": "NONE",
-    "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+    "fontFamily": "Inter",
     "parentColumnSpace": 14.78125,
     "dynamicTriggerPathList": [],
     "leftColumn": 0,
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
-        {"key": "fontFamily"},
         {"key": "borderRadius"}
     ],
     "shouldTruncate": false,
