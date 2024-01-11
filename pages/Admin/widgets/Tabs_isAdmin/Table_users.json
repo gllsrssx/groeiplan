@@ -68,7 +68,7 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1704799346400,
+    "columnUpdatedAt": 1704971564862,
     "primaryColumnId": "_id",
     "defaultSelectedRowIndices": [0],
     "mobileBottomRow": 27,
@@ -122,7 +122,7 @@
             "allowCellWrapping": false,
             "index": 0,
             "isDiscardVisible": true,
-            "isVisible": true,
+            "isVisible": false,
             "label": "lastEmailSent",
             "columnType": "date",
             "thousandSeparator": true,

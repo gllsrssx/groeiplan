@@ -5,7 +5,6 @@
     "isCanvas": false,
     "dynamicPropertyPathList": [
         {"key": "groupButtons.groupButton1.isVisible"},
-        {"key": "groupButtons.groupButtonimbbke7ehc.isVisible"},
         {"key": "groupButtons.groupButton2.isVisible"}
     ],
     "displayName": "Button Group",
@@ -30,7 +29,7 @@
             "id": "groupButtonimbbke7ehc",
             "label": "Coaching",
             "isDisabled": false,
-            "isVisible": "{{\n\tappsmith.store.user?.coachId? true: false\n}}",
+            "isVisible": false,
             "placement": "CENTER"
         },
         "groupButton3": {
@@ -130,7 +129,6 @@
         {"key": "groupButtons.groupButton3.buttonColor"},
         {"key": "groupButtons.groupButtonimbbke7ehc.buttonColor"},
         {"key": "groupButtons.groupButton1.isVisible"},
-        {"key": "groupButtons.groupButtonimbbke7ehc.isVisible"},
         {"key": "groupButtons.groupButton2.isVisible"}
     ],
     "key": "93hpmupf5b",
