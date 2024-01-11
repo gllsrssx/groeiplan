@@ -23,6 +23,9 @@
         "aggregate": {
           "limit": {
             "data": "10"
+          },
+          "arrayPipelines": {
+            "data": ""
           }
         },
         "collection": {
@@ -31,13 +34,57 @@
         "command": {
           "data": "UPDATE"
         },
+        "count": {
+          "query": {
+            "data": ""
+          }
+        },
         "delete": {
           "limit": {
             "data": "SINGLE"
+          },
+          "query": {
+            "data": ""
+          }
+        },
+        "distinct": {
+          "query": {
+            "data": ""
+          },
+          "key": {
+            "data": ""
+          }
+        },
+        "find": {
+          "skip": {
+            "data": ""
+          },
+          "query": {
+            "data": ""
+          },
+          "sort": {
+            "data": ""
+          },
+          "limit": {
+            "data": ""
+          },
+          "projection": {
+            "data": ""
+          }
+        },
+        "insert": {
+          "documents": {
+            "data": ""
+          }
+        },
+        "misc": {
+          "formToNativeQuery": {
+            "data": "{\n  \"update\": \"competences\",\n  \"updates\": [{\n    \"q\": {_id: ObjectId('{{Table_competences.updatedRow._id}}')},\n    \"u\": {{{$set: _.omit(Table_competences.updatedRow, \"_id\")}}},\n    \"multi\": false,\n  }]\n}\n",
+            "status": "SUCCESS"
           }
         },
         "smartSubstitution": {
-          "data": true
+          "data": false
         },
         "updateMany": {
           "limit": {

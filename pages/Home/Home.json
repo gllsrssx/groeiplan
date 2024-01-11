@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1770,
+          "bottomRow": 1790,
           "containerStyle": "none",
           "snapRows": 70,
           "parentRowSpace": 1,
@@ -45,7 +45,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "appsmith.store.user._id"
+                "{\n\tuserId : appsmith.store.user._id,\n\tstatus: {\n    \"$in\": [\n      1,\n      2\n    ]\n  }\n}\n"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -55,7 +55,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "appsmith.store.user._id"
+                "\n{\n\tuserId: appsmith.store.user._id,\n\tstatus: 3\n}\n"
               ],
               "timeoutInMillisecond": 10000
             },

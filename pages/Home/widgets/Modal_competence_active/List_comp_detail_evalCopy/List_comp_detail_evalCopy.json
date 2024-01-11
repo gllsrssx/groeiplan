@@ -4,7 +4,7 @@
     "isCanvas": true,
     "templateHeight": 160,
     "iconSVG": "/static/media/icon.5c9511142b3624c7491c5442e8ccd0ef.svg",
-    "topRow": 20,
+    "topRow": 24,
     "pageSize": 1,
     "type": "LIST_WIDGET_V2",
     "itemSpacing": 8,
@@ -76,7 +76,7 @@
     "isLoading": false,
     "mainCanvasId": "l6d4vf31md",
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "originalBottomRow": 38,
+    "originalBottomRow": 40,
     "additionalStaticProps": [
         "level",
         "levelData",
@@ -87,9 +87,9 @@
     "currentItemsView": "{{[]}}",
     "triggeredItemView": "{{{}}}",
     "widgetName": "List_comp_detail_evalCopy",
-    "listData": "{{\nget_evaluations.data.filter(item => item.writer === appsmith.store.user._id && item.competenceId === List_active_competences.triggeredItem._id)\n}}",
+    "listData": "{{\n  get_evaluations.data.filter(item => item.writer === appsmith.store.user._id && item.competenceId === List_active_competences.triggeredItem._id).length < 1 ? \n  [{ _id: 1, \"feedback\": \"nog geen ondernomen acties ingevuld. \\nDit komt na de zelfevaluatie\", date:Date() }] : \n  get_evaluations.data.filter(item => item.writer === appsmith.store.user._id && item.competenceId === List_active_competences.triggeredItem._id)\n}}\n",
     "displayName": "List",
-    "bottomRow": 37,
+    "bottomRow": 41,
     "parentRowSpace": 10,
     "hideCard": false,
     "mobileRightColumn": 26,
@@ -108,7 +108,7 @@
     "renderMode": "CANVAS",
     "mobileTopRow": 21,
     "responsiveBehavior": "fill",
-    "originalTopRow": 21,
+    "originalTopRow": 23,
     "mobileLeftColumn": 2,
     "selectedItemView": "{{{}}}"
 }

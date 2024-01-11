@@ -31,7 +31,7 @@
     "text": "{{currentItem.name}}",
     "key": "oda53wzzcw",
     "isDeprecated": false,
-    "rightColumn": 26,
+    "rightColumn": 64,
     "textAlign": "LEFT",
     "dynamicHeight": "FIXED",
     "widgetId": "z9idqg72p6",
@@ -52,7 +52,7 @@
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 16,
     "maxDynamicHeight": 9000,
-    "fontSize": "1rem",
+    "fontSize": "1.25rem",
     "textStyle": "BODY",
     "minDynamicHeight": 4
 }

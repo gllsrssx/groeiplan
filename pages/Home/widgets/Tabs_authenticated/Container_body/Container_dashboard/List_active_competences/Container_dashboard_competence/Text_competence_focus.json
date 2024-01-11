@@ -10,7 +10,7 @@
         "label"
     ],
     "topRow": 0,
-    "bottomRow": 4,
+    "bottomRow": 5,
     "type": "TEXT_WIDGET",
     "hideCard": false,
     "mobileRightColumn": 28,
@@ -25,10 +25,10 @@
         {"key": "borderRadius"},
         {"key": "text"}
     ],
-    "leftColumn": 58,
+    "leftColumn": 57,
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "{{currentItem.focus? 'Focus':''}}",
+    "text": "{{currentItem.status ==1? 'Focus':''}}",
     "key": "oda53wzzcw",
     "isDeprecated": false,
     "rightColumn": 63,

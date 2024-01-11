@@ -6,14 +6,13 @@
     "labelWidth": "5",
     "type": "SELECT_WIDGET",
     "serverSideFiltering": true,
-    "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \nFind_users1.data.length == 1 ? Find_users1.data[0]._id : ''\n))(Select_cubee.options, Select_cubee.serverSideFiltering) }}",
+    "defaultOptionValue": "",
     "animateLoading": true,
     "leftColumn": 0,
     "dynamicBindingPathList": [
         {"key": "accentColor"},
         {"key": "borderRadius"},
-        {"key": "sourceData"},
-        {"key": "defaultOptionValue"}
+        {"key": "sourceData"}
     ],
     "placeholderText": "Select a Cubee here to start a coaching evaluation session.",
     "isDisabled": false,

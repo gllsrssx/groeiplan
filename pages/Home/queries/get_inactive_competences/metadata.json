@@ -60,7 +60,7 @@
             "data": ""
           },
           "query": {
-            "data": "{\n\t\"userId\": \"{{appsmith.store.user._id}}\",\n\t\"active\": false\n}"
+            "data": "{{\n{\n\tuserId: appsmith.store.user._id,\n\tstatus: 3\n}\n}}"
           },
           "sort": {
             "data": ""
@@ -79,7 +79,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {\n\t\"userId\": \"{{appsmith.store.user._id}}\",\n\t\"active\": false\n},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
+            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {{\n{\n\tuserId: appsmith.store.user._id,\n\tstatus: 3\n}\n}},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -109,7 +109,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.store.user._id"
+      "\n{\n\tuserId: appsmith.store.user._id,\n\tstatus: 3\n}\n"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
