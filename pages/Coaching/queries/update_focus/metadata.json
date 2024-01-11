@@ -79,7 +79,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"update\": \"competences\",\n  \"updates\": [{\n    \"q\": {\"_id\": ObjectId('{{Text_comp_id.text}}')},\n    \"u\": {\"$set\": {\n    \"focus\": {{Switch_focus.isSwitchedOn}}\n  }},\n    \"multi\": false,\n  }]\n}\n",
+            "data": "{\n  \"update\": \"competences\",\n  \"updates\": [{\n    \"q\": {\"_id\": ObjectId('{{Text_comp_id.text}}')},\n    \"u\": {\"$set\": {\n    \"status\": {{Switch_focus.isSwitchedOn?1:2}}\n  }},\n    \"multi\": false,\n  }]\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -94,7 +94,7 @@
             "data": "{\"_id\": ObjectId('{{Text_comp_id.text}}')}"
           },
           "update": {
-            "data": "{\"$set\": {\n    \"focus\": {{Switch_focus.isSwitchedOn}}\n  }}"
+            "data": "{\"$set\": {\n    \"status\": {{Switch_focus.isSwitchedOn?1:2}}\n  }}"
           }
         }
       }
@@ -112,7 +112,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Switch_focus.isSwitchedOn",
+      "Switch_focus.isSwitchedOn?1:2",
       "Text_comp_id.text"
     ],
     "userSetOnLoad": false,

@@ -6,7 +6,7 @@
     "iconSVG": "/static/media/icon.afbd826fee9d09b12c5cde30a8c6fe62.svg",
     "searchTags": ["boolean"],
     "topRow": 19,
-    "bottomRow": 27,
+    "bottomRow": 23,
     "parentRowSpace": 10,
     "type": "SWITCH_WIDGET",
     "alignWidget": "LEFT",
@@ -38,6 +38,6 @@
     "originalTopRow": 19,
     "mobileLeftColumn": 28,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 23,
+    "originalBottomRow": 27,
     "minDynamicHeight": 4
 }

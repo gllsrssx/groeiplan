@@ -60,16 +60,16 @@
             "data": ""
           },
           "query": {
-            "data": "{\n  \"userId\": {\n    \"$in\": [\n      {{ appsmith.store.user._id }},\n      \"0\"\n    ]\n  },\n  \"active\": true\n}\n"
+            "data": "{\n  \"userId\": {\n    \"$in\": [\n      {{ appsmith.store.user._id }},\n      \"0\"\n    ]\n  },\n\t\"status\": {\n    \"$in\": [\n      1,\n      2\n    ]\n  }\n}\n"
           },
           "sort": {
-            "data": "{{ \n    { \n        \"userId\": -1, \n        \"focus\": -1,\n        ...(Table_competences.sortOrder.column ? { [Table_competences.sortOrder.column]: Table_competences.sortOrder.order !== \"desc\" ? 1 : -1 } : {}) \n    }\n}}"
+            "data": "{\nuserId: -1, \nstatus: 1\n}"
           },
           "limit": {
             "data": ""
           },
           "projection": {
-            "data": ""
+            "data": "{img:0}"
           }
         },
         "insert": {
@@ -79,7 +79,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {\n  \"userId\": {\n    \"$in\": [\n      {{ appsmith.store.user._id }},\n      \"0\"\n    ]\n  },\n  \"active\": true\n}\n,\n  \"sort\": {{ \n    { \n        \"userId\": -1, \n        \"focus\": -1,\n        ...(Table_competences.sortOrder.column ? { [Table_competences.sortOrder.column]: Table_competences.sortOrder.order !== \"desc\" ? 1 : -1 } : {}) \n    }\n}},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
+            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {\n  \"userId\": {\n    \"$in\": [\n      {{ appsmith.store.user._id }},\n      \"0\"\n    ]\n  },\n\t\"status\": {\n    \"$in\": [\n      1,\n      2\n    ]\n  }\n}\n,\n  \"sort\": {\nuserId: -1, \nstatus: 1\n},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -103,16 +103,12 @@
     "dynamicBindingPathList": [
       {
         "key": "formData.find.query.data"
-      },
-      {
-        "key": "formData.find.sort.data"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      " \n    { \n        \"userId\": -1, \n        \"focus\": -1,\n        ...(Table_competences.sortOrder.column ? { [Table_competences.sortOrder.column]: Table_competences.sortOrder.order !== \"desc\" ? 1 : -1 } : {}) \n    }\n",
       " appsmith.store.user._id "
     ],
     "userSetOnLoad": false,

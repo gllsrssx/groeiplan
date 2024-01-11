@@ -74,12 +74,12 @@
         },
         "insert": {
           "documents": {
-            "data": "{{\n\t[{\n\t\tname:Input1.text, \n\t\tdescription : Input2.text, \n\t\tuserId: Select_cubee.selectedOptionValue, \n\t\tstatus: Switch1.isSwitchedOn?4:3, \n\t\timg: FilePicker1.files[0]?.data?.toString()?FilePicker1.files[0].data.toString() :\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVoZd9rcX9foe2rH5PIurf93uzksmqZJ2w6OTQa-NIzH_wAVfccPcun1JgKo51wtU-HAI&usqp=CAU\"\n\t}]\n}}"
+            "data": "{{\n\t[{\n\t\tname:Input1.text, \n\t\tdescription : Input2.text, \n\t\tuserId: Select_cubee.selectedOptionValue, \n\t\tstatus: Switch1.isSwitchedOn?1:2, \n\t\timg: FilePicker1.files[0]?.data?.toString()?FilePicker1.files[0].data.toString() :\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVoZd9rcX9foe2rH5PIurf93uzksmqZJ2w6OTQa-NIzH_wAVfccPcun1JgKo51wtU-HAI&usqp=CAU\"\n\t}]\n}}"
           }
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"insert\": \"competences\",\n  \"documents\": {{\n\t[{\n\t\tname:Input1.text, \n\t\tdescription : Input2.text, \n\t\tuserId: Select_cubee.selectedOptionValue, \n\t\tstatus: Switch1.isSwitchedOn?4:3, \n\t\timg: FilePicker1.files[0]?.data?.toString()?FilePicker1.files[0].data.toString() :\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVoZd9rcX9foe2rH5PIurf93uzksmqZJ2w6OTQa-NIzH_wAVfccPcun1JgKo51wtU-HAI&usqp=CAU\"\n\t}]\n}}\n}\n",
+            "data": "{\n  \"insert\": \"competences\",\n  \"documents\": {{\n\t[{\n\t\tname:Input1.text, \n\t\tdescription : Input2.text, \n\t\tuserId: Select_cubee.selectedOptionValue, \n\t\tstatus: Switch1.isSwitchedOn?1:2, \n\t\timg: FilePicker1.files[0]?.data?.toString()?FilePicker1.files[0].data.toString() :\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVoZd9rcX9foe2rH5PIurf93uzksmqZJ2w6OTQa-NIzH_wAVfccPcun1JgKo51wtU-HAI&usqp=CAU\"\n\t}]\n}}\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -109,7 +109,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "\n\t[{\n\t\tname:Input1.text, \n\t\tdescription : Input2.text, \n\t\tuserId: Select_cubee.selectedOptionValue, \n\t\tstatus: Switch1.isSwitchedOn?4:3, \n\t\timg: FilePicker1.files[0]?.data?.toString()?FilePicker1.files[0].data.toString() :\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVoZd9rcX9foe2rH5PIurf93uzksmqZJ2w6OTQa-NIzH_wAVfccPcun1JgKo51wtU-HAI&usqp=CAU\"\n\t}]\n"
+      "\n\t[{\n\t\tname:Input1.text, \n\t\tdescription : Input2.text, \n\t\tuserId: Select_cubee.selectedOptionValue, \n\t\tstatus: Switch1.isSwitchedOn?1:2, \n\t\timg: FilePicker1.files[0]?.data?.toString()?FilePicker1.files[0].data.toString() :\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVoZd9rcX9foe2rH5PIurf93uzksmqZJ2w6OTQa-NIzH_wAVfccPcun1JgKo51wtU-HAI&usqp=CAU\"\n\t}]\n"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
