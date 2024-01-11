@@ -21,11 +21,12 @@
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
         {"key": "fontFamily"},
-        {"key": "borderRadius"}
+        {"key": "borderRadius"},
+        {"key": "text"}
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "Competentie toevoegen",
+    "text": "Competentie voor {{Select_cubee.selectedOptionLabel}} toevoegen",
     "key": "0ctrzt0gqv",
     "isDeprecated": false,
     "rightColumn": 64,

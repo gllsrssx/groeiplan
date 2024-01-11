@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1150,
+          "bottomRow": 1110,
           "containerStyle": "none",
           "snapRows": 68,
           "parentRowSpace": 1,
@@ -47,6 +47,7 @@
               "jsonPathKeys": [
                 "Table_competences.pageOffset",
                 "{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t|| \"0\"\n}",
+                "{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t\n}",
                 "Table_competences.pageSize"
               ],
               "timeoutInMillisecond": 10000
