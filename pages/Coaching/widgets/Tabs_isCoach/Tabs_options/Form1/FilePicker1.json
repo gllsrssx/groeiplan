@@ -10,7 +10,7 @@
     "bottomRow": 23,
     "parentRowSpace": 10,
     "type": "FILE_PICKER_WIDGET_V2",
-    "allowedFileTypes": [".png"],
+    "allowedFileTypes": ["image/*"],
     "hideCard": false,
     "mobileRightColumn": 18,
     "animateLoading": true,

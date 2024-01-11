@@ -74,12 +74,12 @@
         },
         "insert": {
           "documents": {
-            "data": "{{[{name:Input1.text, description : Input2.text, focus: Switch1.isSwitchedOn, userId: Select_cubee.selectedOptionValue, img: FilePicker1.files[0]?.data?FilePicker1.files[0].data:\"\" }]}}"
+            "data": "{{[{name:Input1.text, description : Input2.text, focus: Switch1.isSwitchedOn, userId: Select_cubee.selectedOptionValue, img: FilePicker1.files[0]?.data.toString() }]}}"
           }
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"insert\": \"competences\",\n  \"documents\": {{[{name:Input1.text, description : Input2.text, focus: Switch1.isSwitchedOn, userId: Select_cubee.selectedOptionValue, img: FilePicker1.files[0]?.data?FilePicker1.files[0].data:\"\" }]}}\n}\n",
+            "data": "{\n  \"insert\": \"competences\",\n  \"documents\": {{[{name:Input1.text, description : Input2.text, focus: Switch1.isSwitchedOn, userId: Select_cubee.selectedOptionValue, img: FilePicker1.files[0]?.data.toString() }]}}\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -109,7 +109,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "[{name:Input1.text, description : Input2.text, focus: Switch1.isSwitchedOn, userId: Select_cubee.selectedOptionValue, img: FilePicker1.files[0]?.data?FilePicker1.files[0].data:\"\" }]"
+      "[{name:Input1.text, description : Input2.text, focus: Switch1.isSwitchedOn, userId: Select_cubee.selectedOptionValue, img: FilePicker1.files[0]?.data.toString() }]"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
