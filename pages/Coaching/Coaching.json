@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 2750,
+          "bottomRow": 1330,
           "containerStyle": "none",
           "snapRows": 68,
           "parentRowSpace": 1,
@@ -48,7 +48,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async function () {\n  Find_users1.run();\n  get_active_competences.run();\n  get_inactive_competences.run();\n  Find_competences1.run();\n  get_evaluations.run();\n}"
+                "async function () {\n  get_active_competences.run();\n  get_inactive_competences.run();\n  Find_competences1.run();\n  get_evaluations.run();\n}"
               ],
               "timeoutInMillisecond": 10000
             }
