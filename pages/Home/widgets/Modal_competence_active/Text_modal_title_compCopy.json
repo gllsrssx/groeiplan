@@ -29,7 +29,7 @@
     "text": "{{List_active_competences.triggeredItem.name}}",
     "key": "anlmnxaxgv",
     "isDeprecated": false,
-    "rightColumn": 46,
+    "rightColumn": 59,
     "textAlign": "LEFT",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "j05te9v6ch",
@@ -51,7 +51,7 @@
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 1,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 13,
+    "originalBottomRow": 7,
     "fontSize": "3rem",
     "minDynamicHeight": 4
 }

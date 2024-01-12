@@ -4,7 +4,7 @@
     "isCanvas": true,
     "templateHeight": 160,
     "iconSVG": "/static/media/icon.5c9511142b3624c7491c5442e8ccd0ef.svg",
-    "topRow": 16,
+    "topRow": 15,
     "pageSize": 1,
     "type": "LIST_WIDGET_V2",
     "itemSpacing": 8,
@@ -76,7 +76,7 @@
     "isLoading": false,
     "mainCanvasId": "p689duawni",
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "originalBottomRow": 33,
+    "originalBottomRow": 32,
     "additionalStaticProps": [
         "level",
         "levelData",
@@ -89,7 +89,7 @@
     "widgetName": "List_comp_detail_eval",
     "listData": "{{\nget_evaluations.data.filter(item => item.writer === appsmith.store.user._id && item.competenceId === List_inactive_competences.triggeredItem._id)\n}}",
     "displayName": "List",
-    "bottomRow": 33,
+    "bottomRow": 32,
     "parentRowSpace": 10,
     "hideCard": false,
     "mobileRightColumn": 26,
@@ -108,7 +108,7 @@
     "renderMode": "CANVAS",
     "mobileTopRow": 21,
     "responsiveBehavior": "fill",
-    "originalTopRow": 16,
+    "originalTopRow": 15,
     "mobileLeftColumn": 2,
     "selectedItemView": "{{{}}}"
 }

@@ -10,12 +10,12 @@
         "label"
     ],
     "topRow": 5,
-    "bottomRow": 16,
+    "bottomRow": 18,
     "type": "TEXT_WIDGET",
     "hideCard": false,
     "mobileRightColumn": 24,
     "animateLoading": true,
-    "overflow": "NONE",
+    "overflow": "SCROLL",
     "dynamicTriggerPathList": [],
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "dynamicBindingPathList": [
@@ -27,7 +27,7 @@
     "leftColumn": 10,
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "{{(get_evaluations.data\n  .filter(item => item.competenceId === currentItem._id)\n  .sort((a, b) => new Date(b.date) - new Date(a.date))\n  .map(item => item.smart)[0] ? \"Je laatste smart actie voor \"+List_active_competences.triggeredItem.name+\" is:\\n\\n\" : \"\") + (get_evaluations.data\n  .filter(item => item.competenceId === currentItem._id)\n  .sort((a, b) => new Date(b.date) - new Date(a.date))\n  .map(item => item.smart)[0] || 'Nog geen smart acties. \\nDeze komen na het evaluatiemoment. \\n\\nJe kan hier altijd klikken om meer informatie te zien')}}",
+    "text": "{{(get_evaluations.data\n  .filter(item => item.competenceId === currentItem._id)\n  .sort((a, b) => new Date(b.date) - new Date(a.date))\n  .map(item => item.smart)[0] ? \"Je laatste smart actie voor \"+currentItem.name+\" is:\\n\\n\" : \"\") + (get_evaluations.data\n  .filter(item => item.competenceId === currentItem._id)\n  .sort((a, b) => new Date(b.date) - new Date(a.date))\n  .map(item => item.smart)[0] || 'Nog geen smart acties. \\nDeze komen na het evaluatiemoment. \\n\\nJe kan hier altijd klikken om meer informatie te zien')}}",
     "key": "oda53wzzcw",
     "isDeprecated": false,
     "rightColumn": 57,

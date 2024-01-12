@@ -11,13 +11,13 @@
         "submit"
     ],
     "topRow": 0,
-    "bottomRow": 4,
+    "bottomRow": 7,
     "type": "ICON_BUTTON_WIDGET",
     "hideCard": false,
     "mobileRightColumn": 64,
     "animateLoading": true,
     "dynamicTriggerPathList": [{"key": "onClick"}],
-    "leftColumn": 58,
+    "leftColumn": 60,
     "dynamicBindingPathList": [
         {"key": "buttonColor"},
         {"key": "borderRadius"}

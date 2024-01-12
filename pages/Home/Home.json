@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1790,
+          "bottomRow": 1740,
           "containerStyle": "none",
           "snapRows": 70,
           "parentRowSpace": 1,
@@ -107,6 +107,16 @@
             }
           ],
           [
+            {
+              "id": "Home_get_general_evaluations",
+              "name": "get_general_evaluations",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "\n{\n\t\"userId\": appsmith.store.user._id,\n\t\"feedback\": { \"$ne\": \"\" },\n\t\"competenceId\": get_active_competences.data.filter(item => item.userId == 0)[0]._id\n}\n"
+              ],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "Home_get_user_api",
               "name": "get_user_api",

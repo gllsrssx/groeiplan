@@ -29,7 +29,7 @@
     "text": "{{List_inactive_competences.triggeredItem.name}}",
     "key": "anlmnxaxgv",
     "isDeprecated": false,
-    "rightColumn": 46,
+    "rightColumn": 56,
     "textAlign": "LEFT",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "oqnkpvu2p2",

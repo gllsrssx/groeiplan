@@ -31,6 +31,7 @@
     "mobileBottomRow": 15,
     "widgetName": "Select_cubee",
     "isFilterable": true,
+    "dynamicPropertyPathList": [{"key": "sourceData"}],
     "displayName": "Select",
     "searchTags": ["dropdown"],
     "bottomRow": 13,

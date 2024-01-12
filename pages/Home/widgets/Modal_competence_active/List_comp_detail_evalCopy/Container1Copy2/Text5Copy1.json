@@ -24,13 +24,13 @@
         {"key": "borderRadius"},
         {"key": "text"}
     ],
-    "leftColumn": 58,
+    "leftColumn": 57,
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
     "text": "{{currentItem.date? new Date(currentItem.date).toLocaleDateString('en-GB', {\n  day: '2-digit',\n  month: '2-digit',\n\tyear: '2-digit'\n})\n:''\n}}",
     "key": "p9sq3qe89u",
     "isDeprecated": false,
-    "rightColumn": 64,
+    "rightColumn": 63,
     "textAlign": "RIGHT",
     "dynamicHeight": "FIXED",
     "widgetId": "ecu8hkf6al",
@@ -51,7 +51,7 @@
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 16,
     "maxDynamicHeight": 9000,
-    "fontSize": "1rem",
+    "fontSize": "0.875rem",
     "textStyle": "BODY",
     "minDynamicHeight": 4
 }
