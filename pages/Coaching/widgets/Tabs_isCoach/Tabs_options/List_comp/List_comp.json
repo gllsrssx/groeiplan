@@ -5,7 +5,7 @@
     "templateHeight": 160,
     "iconSVG": "/static/media/icon.5c9511142b3624c7491c5442e8ccd0ef.svg",
     "topRow": 11,
-    "pageSize": 6,
+    "pageSize": 5,
     "type": "LIST_WIDGET_V2",
     "itemSpacing": 8,
     "animateLoading": true,

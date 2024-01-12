@@ -30,7 +30,7 @@
     "leftColumn": 0,
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "{{get_evaluations.data.filter(\n    item => item.userId == Select_cubee.selectedOptionValue &&\n            item.writer == item.userId &&\n            item.competenceId == currentItem._id &&\n            new Date(item.date) > new Date(new Date().getTime() - (3 * 7 * 24 * 60 * 60 * 1000))\n  ).length > 0 ? \"   Ondernomen acties en zelfevlauatie \"+Select_cubee.selectedOptionLabel+ \": \\n\\n\" + currentItem.feedback :\"Heeft nog geen zelfevaluatie gedaan! \\nLaat \"+Select_cubee.selectedOptionLabel+ \" eerst een zelfevaluatie doen.\"}}",
+    "text": "{{currentItem.feedback}}",
     "key": "g1vf2v7pxn",
     "isDeprecated": false,
     "rightColumn": 53,
@@ -41,7 +41,7 @@
     "minWidth": 450,
     "isVisible": true,
     "fontStyle": "",
-    "textColor": "{{get_evaluations.data.filter(\n    item => item.userId == Select_cubee.selectedOptionValue &&\n            item.writer == item.userId &&\n            item.competenceId == currentItem._id &&\n            new Date(item.date) > new Date(new Date().getTime() - (3 * 7 * 24 * 60 * 60 * 1000))\n  ).length > 0 ? \"black\" : \"red\"}}",
+    "textColor": "{{\nget_evaluations.data.filter(\n\titem => \n\titem.userId == Select_cubee.selectedOptionValue &&\n\titem.writer == item.userId &&\n\titem.competenceId == Text_comp_id.text &&\n\tnew Date(item.date) > new Date(new Date().getTime() - (3 * 7 * 24 * 60 * 60 * 1000))\n).length > 0 ? \"black\" : \"red\"\n\n}}",
     "version": 1,
     "parentId": "str9kcai7f",
     "tags": [
