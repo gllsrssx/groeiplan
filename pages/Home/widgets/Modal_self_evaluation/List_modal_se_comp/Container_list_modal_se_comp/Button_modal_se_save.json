@@ -3,7 +3,7 @@
     "boxShadow": "none",
     "mobileBottomRow": 22,
     "widgetName": "Button_modal_se_save",
-    "onClick": "{{\nstoreValue('selfEvaluation', \n\t\t\t\t\t List_modal_se_comp.currentItemsView\n\t\t\t\t\t .filter(item => item.Input_List_modal_se_comp.text.trim() !== '')\n\t\t\t\t\t .map(item => ({\n\tcompetenceId: item.Text_list_modal_se_comp_id.text,\n\tfeedback: item.Input_List_modal_se_comp.text.trim(),\n\tuserId: appsmith.store.user._id,\n\tcoachId: get_user.data[0].coachId,\n\twriter: appsmith.store.user._id,\n\tdate: {\n\t\t\"$date\": new Date().toISOString()\n\t}\n}))\n\t\t\t\t\t).then(() => {\n\tsave_evaluation.run();\n}).then(() => {\n\tcloseModal('Modal_self_evaluation');\n\tshowAlert('saved', 'success');\n});\n}}\n",
+    "onClick": "{{\nstoreValue('selfEvaluation', \n\t\t\t\t\t List_modal_se_comp.currentItemsView\n\t\t\t\t\t .filter(item => item.Input_List_modal_se_comp.text.trim() !== '')\n\t\t\t\t\t .map(item => ({\n\tcompetenceId: item.Text_list_modal_se_comp_id.text,\n\tfeedback: item.Input_List_modal_se_comp.text.trim(),\n\tuserId: appsmith.store.user._id,\n\tcoachId: appsmith.store.user.coachId,\n\twriter: appsmith.store.user._id,\n\tdate: {\n\t\t\"$date\": new Date().toISOString()\n\t}\n}))\n\t\t\t\t\t).then(() => {\n\tsave_evaluation.run();\n}).then(() => {\n\tcloseModal('Modal_self_evaluation');\n\tshowAlert('saved', 'success');\n});\n}}\n",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "dynamicPropertyPathList": [
         {"key": "onClick"},

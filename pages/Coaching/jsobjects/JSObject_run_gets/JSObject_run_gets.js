@@ -3,6 +3,6 @@ export default {
 		get_active_competences.run();
 		get_inactive_competences.run();
 		Find_competences1.run();
-		get_evaluations.run();
+		get_self_evaluations.run();
 	}
 }

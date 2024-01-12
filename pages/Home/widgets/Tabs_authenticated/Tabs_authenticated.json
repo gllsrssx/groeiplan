@@ -111,7 +111,7 @@
     "tags": ["Layout"],
     "isLoading": false,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "originalBottomRow": 174,
+    "originalBottomRow": 162,
     "mobileBottomRow": 15,
     "widgetName": "Tabs_authenticated",
     "dynamicPropertyPathList": [],

@@ -86,7 +86,7 @@
     "currentItemsView": "{{[]}}",
     "triggeredItemView": "{{{}}}",
     "widgetName": "List_actions",
-    "listData": "{{\nget_self_evaluations.data\n.filter(item => \n\t\t\t\titem.competenceId == Text_comp_id.text &&\n\t\t\t\tnew Date(item.date) > new Date(new Date().getTime() - (3 * 7 * 24 * 60 * 60 * 1000))\n\t\t\t )\n.sort((a, b) => new Date(b.date) - new Date(a.date))\n.length > 0 ?\nget_self_evaluations.data\n.filter(item => \n\t\t\t\titem.competenceId == Text_comp_id.text &&\n\t\t\t\tnew Date(item.date) > new Date(new Date().getTime() - (3 * 7 * 24 * 60 * 60 * 1000))\n\t\t\t )\n.sort((a, b) => new Date(b.date) - new Date(a.date)) :\n[{_id: 1, feedback: \"Heeft nog geen zelfevaluatie gedaan! \\nLaat \"+Select_cubee.selectedOptionLabel+ \" eerst een zelfevaluatie doen.\"}]\n}}\n",
+    "listData": "{{\nget_self_evaluations.data\n.filter(item => \n\t\t\t\titem.competenceId == Text_comp_id.text &&\n\t\t\t\tnew Date(item.date) > new Date(new Date().getTime() - (3 * 7 * 24 * 60 * 60 * 1000))\n\t\t\t )\n.sort((a, b) => new Date(b.date) - new Date(a.date))\n.length > 0 ?\nget_self_evaluations.data\n.filter(item => \n\t\t\t\titem.competenceId == Text_comp_id.text &&\n\t\t\t\tnew Date(item.date) > new Date(new Date().getTime() - (3 * 7 * 24 * 60 * 60 * 1000))\n\t\t\t )\n.sort((a, b) => new Date(b.date) - new Date(a.date)) :\n[{_id: 1, feedback: \"Heeft nog geen zelfevaluatie gedaan! \\nLaat \"+Select_cubee.selectedOptionLabel+ \" eerst een zelfevaluatie doen.\"}]\n}}",
     "displayName": "List",
     "bottomRow": 34,
     "parentRowSpace": 10,

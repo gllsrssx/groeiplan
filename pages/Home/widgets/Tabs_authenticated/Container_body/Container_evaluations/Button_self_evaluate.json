@@ -3,7 +3,7 @@
     "boxShadow": "none",
     "mobileBottomRow": 15,
     "widgetName": "Button_self_evaluate",
-    "onClick": "{{showModal('Modal_self_evaluation');}}",
+    "onClick": "{{showModal('Modal_self_evaluation').then(() => {\n  get_users.run();\n});}}",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "dynamicPropertyPathList": [{"key": "isVisible"}],
     "displayName": "Button",
