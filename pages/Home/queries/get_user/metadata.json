@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "get_active_competences",
+    "name": "get_user",
     "datasource": {
       "name": "GAP",
       "pluginId": "mongo-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Coaching",
+    "pageId": "Home",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -29,7 +29,7 @@
           }
         },
         "collection": {
-          "data": "competences"
+          "data": "users"
         },
         "command": {
           "data": "FIND"
@@ -60,10 +60,10 @@
             "data": ""
           },
           "query": {
-            "data": "{\n  \"userId\": {\n    \"$in\": [\n      {{ Select_cubee.selectedOptionValue }},\n      0\n    ]\n  },\n\t\"status\": {\n    \"$in\": [\n      1,\n      2\n    ]\n  }\n}\n"
+            "data": "{ \"_id\": { \"$oid\": {{appsmith.store.user._id}}} }"
           },
           "sort": {
-            "data": "{\nuserId: -1, \nstatus: 1\n}"
+            "data": ""
           },
           "limit": {
             "data": ""
@@ -79,7 +79,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {\n  \"userId\": {\n    \"$in\": [\n      {{ Select_cubee.selectedOptionValue }},\n      0\n    ]\n  },\n\t\"status\": {\n    \"$in\": [\n      1,\n      2\n    ]\n  }\n}\n,\n  \"sort\": {\nuserId: -1, \nstatus: 1\n},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
+            "data": "{\n  \"find\": \"users\",\n  \"filter\": { \"_id\": { \"$oid\": {{appsmith.store.user._id}}} },\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -99,7 +99,7 @@
         }
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "formData.find.query.data"
@@ -109,15 +109,15 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      " Select_cubee.selectedOptionValue "
+      "appsmith.store.user._id"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-12-21T13:31:07Z"
+    "createdAt": "2024-01-12T12:46:28Z"
   },
-  "id": "Coaching_get_active_competences",
+  "id": "Home_get_user",
   "deleted": false,
-  "gitSyncId": "65815cbedd2bbe1de86cce4d_65843e1b496d6514fbe929de"
+  "gitSyncId": "65815cbedd2bbe1de86cce4d_65a134a42897a24102bd9438"
 }

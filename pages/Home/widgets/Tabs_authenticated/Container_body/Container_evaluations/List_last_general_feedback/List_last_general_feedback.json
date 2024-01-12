@@ -86,7 +86,7 @@
     "currentItemsView": "{{[]}}",
     "triggeredItemView": "{{{}}}",
     "widgetName": "List_last_general_feedback",
-    "listData": "{{get_evaluations.data.filter(item => item.competenceId == 0 && item.writer == item.coachId).length == 0? [{_id:0,feedback: \"\\nNa de evaluatie met je coach komt de algemene feedback hier. Klik op het kaartje om dan meer info te zien.\", date:Date()}] : get_evaluations.data.filter(item => item.competenceId == 0 && item.writer == item.coachId)}}",
+    "listData": "{{get_evaluations.data.filter(item => item.competenceId == 0 && item.writer == item.coachId).length == 0? [{_id:0,feedback: \"\\nNa de evaluatie met je coach komt de algemene feedback hier. Klik op het kaartje om dan meer info te zien.\"}] : get_evaluations.data.filter(item => item.competenceId == 0 && item.writer == item.coachId)}}",
     "displayName": "List",
     "bottomRow": 55,
     "parentRowSpace": 10,

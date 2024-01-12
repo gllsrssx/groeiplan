@@ -86,7 +86,7 @@
     "currentItemsView": "{{[]}}",
     "triggeredItemView": "{{{}}}",
     "widgetName": "List_actions",
-    "listData": "{{\n  get_evaluations.data.filter(\n    item => item.userId == Select_cubee.selectedOptionValue &&\n            item.writer == item.userId &&\n            item.competenceId == currentItem._id &&\n            new Date(item.date) > new Date(new Date().getTime() - (3 * 7 * 24 * 60 * 60 * 1000))\n  ).length > 0 ?\n    get_evaluations.data.filter(\n      item => item.userId == Select_cubee.selectedOptionValue &&\n              item.writer == item.userId &&\n              item.competenceId == currentItem._id &&\n              new Date(item.date) > new Date(new Date().getTime() - (3 * 7 * 24 * 60 * 60 * 1000))\n    ) :\n    [{_id: 1, feedback: \"Heeft nog geen zelfevaluatie gedaan! \\nLaat \"+Select_cubee.selectedOptionLabel+ \" eerst een zelfevaluatie doen.\"}]\n}}\n",
+    "listData": "{{\nget_evaluations.data.filter(\n\titem => item.userId == Select_cubee.selectedOptionValue &&\n\titem.writer == item.userId &&\n\titem.competenceId == currentItem._id &&\n\tnew Date(item.date) > new Date(new Date().getTime() - (3 * 7 * 24 * 60 * 60 * 1000))\n).length > 0 ?\nget_evaluations.data.filter(\n\titem => item.userId == Select_cubee.selectedOptionValue &&\n\titem.writer == item.userId &&\n\titem.competenceId == currentItem._id &&\n\tnew Date(item.date) > new Date(new Date().getTime() - (3 * 7 * 24 * 60 * 60 * 1000))\n) :\n[{_id: 1, feedback: \"Heeft nog geen zelfevaluatie gedaan! \\nLaat \"+Select_cubee.selectedOptionLabel+ \" eerst een zelfevaluatie doen.\"}]\n}}\n",
     "displayName": "List",
     "bottomRow": 34,
     "parentRowSpace": 10,

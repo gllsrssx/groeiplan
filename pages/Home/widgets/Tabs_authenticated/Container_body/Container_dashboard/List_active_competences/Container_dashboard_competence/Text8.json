@@ -28,7 +28,7 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "{{new Date(get_evaluations.data\n  .filter(item => item.competenceId === currentItem._id)\n  .sort((a, b) => new Date(b.date) - new Date(a.date))\n  .map(item => item.date)[0]).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: '2-digit' })\n \n\t }}",
+    "text": "{{get_evaluations.data\n  .filter(item => item.competenceId === currentItem._id)\n  .sort((a, b) => new Date(b.date) - new Date(a.date))\n  .map(item => item.date)[0]? new Date(get_evaluations.data\n  .filter(item => item.competenceId === currentItem._id)\n  .sort((a, b) => new Date(b.date) - new Date(a.date))\n  .map(item => item.date)[0]).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: '2-digit' })\n :''\n\t }}",
     "key": "adsocrsysi",
     "isDeprecated": false,
     "rightColumn": 63,

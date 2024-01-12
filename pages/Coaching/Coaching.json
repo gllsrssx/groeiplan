@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1330,
+          "bottomRow": 2750,
           "containerStyle": "none",
           "snapRows": 68,
           "parentRowSpace": 1,
@@ -28,6 +28,19 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Coaching_Find_competences1",
+              "name": "Find_competences1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Table_competences.pageOffset",
+                "{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t|| \"0\"\n}",
+                "{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t\n}",
+                "Table_competences.pageSize"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Coaching_JSObject_run_gets.myFun1",
               "name": "JSObject_run_gets.myFun1",
               "collectionId": "Coaching_JSObject_run_gets",
@@ -38,29 +51,16 @@
                 "async function () {\n  Find_users1.run();\n  get_active_competences.run();\n  get_inactive_competences.run();\n  Find_competences1.run();\n  get_evaluations.run();\n}"
               ],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
               "id": "Coaching_get_active_competences",
               "name": "get_active_competences",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                " appsmith.store.user._id "
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Coaching_Find_competences1",
-              "name": "Find_competences1",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "Table_competences.pageOffset",
-                "{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t|| \"0\"\n}",
-                "{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t\n}",
-                "Table_competences.pageSize"
+                " Select_cubee.selectedOptionValue "
               ],
               "timeoutInMillisecond": 10000
             }
