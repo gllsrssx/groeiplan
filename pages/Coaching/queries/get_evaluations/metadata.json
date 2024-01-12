@@ -60,10 +60,10 @@
             "data": ""
           },
           "query": {
-            "data": "{{{\n\tuserId: Select_cubee.selectedOptionValue,\n\tfeedback: { \"$ne\": \"\" }\n}}}"
+            "data": "{{\n{\n\tuserId: Select_cubee.selectedOptionValue,\n\tfeedback: { \"$ne\": \"\" }\n}\n}}"
           },
           "sort": {
-            "data": "{date: -1}"
+            "data": ""
           },
           "limit": {
             "data": ""
@@ -79,7 +79,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"evaluations\",\n  \"filter\": {{{\n\tuserId: Select_cubee.selectedOptionValue,\n\tfeedback: { \"$ne\": \"\" }\n}}},\n  \"sort\": {date: -1},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
+            "data": "{\n  \"find\": \"evaluations\",\n  \"filter\": {{\n{\n\tuserId: Select_cubee.selectedOptionValue,\n\tfeedback: { \"$ne\": \"\" }\n}\n}},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -109,7 +109,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "{\n\tuserId: Select_cubee.selectedOptionValue,\n\tfeedback: { \"$ne\": \"\" }\n}"
+      "\n{\n\tuserId: Select_cubee.selectedOptionValue,\n\tfeedback: { \"$ne\": \"\" }\n}\n"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

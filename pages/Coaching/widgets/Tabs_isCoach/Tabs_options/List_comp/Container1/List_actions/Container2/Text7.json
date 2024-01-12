@@ -28,7 +28,7 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "{{currentItem.date}}",
+    "text": "{{currentItem.date? new Date(currentItem.date).toLocaleDateString('en-GB', {\n  day: '2-digit',\n  month: '2-digit',\n\tyear: '2-digit'\n})\n:''\n}}",
     "key": "3ycpg7udi0",
     "isDeprecated": false,
     "rightColumn": 64,

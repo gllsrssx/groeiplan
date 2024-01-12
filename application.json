@@ -32,7 +32,7 @@
   "color": "#C7F3F0",
   "icon": "flag",
   "unpublishedAppLayout": {
-    "type": "FLUID"
+    "type": "DESKTOP"
   },
   "publishedAppLayout": {
     "type": "FLUID"

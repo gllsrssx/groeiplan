@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1330,
+          "bottomRow": 2850,
           "containerStyle": "none",
           "snapRows": 68,
           "parentRowSpace": 1,
@@ -34,9 +34,9 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "Table_competences.pageOffset",
+                "{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t|| \"0\"\n}",
                 "Table_competences.pageSize",
-                "{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t\n}",
-                "{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t|| \"0\"\n}"
+                "\n{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\n}\n"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -92,7 +92,17 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "{\n\tuserId: Select_cubee.selectedOptionValue,\n\tfeedback: { \"$ne\": \"\" }\n}"
+                "\n{\n\tuserId: Select_cubee.selectedOptionValue,\n\tfeedback: { \"$ne\": \"\" }\n}\n"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Coaching_get_self_evaluations",
+              "name": "get_self_evaluations",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "\n{\n\tuserId: Select_cubee.selectedOptionValue,\n\tfeedback: { \"$ne\": \"\" },\n\twriter: Select_cubee.selectedOptionValue\n}\n"
               ],
               "timeoutInMillisecond": 10000
             }

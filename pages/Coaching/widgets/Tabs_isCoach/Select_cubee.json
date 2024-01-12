@@ -6,7 +6,7 @@
     "labelWidth": "5",
     "type": "SELECT_WIDGET",
     "serverSideFiltering": true,
-    "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( Find_users1.data?.length > 1? '' : Find_users1.data[0]._id))(Select_cubee.options, Select_cubee.serverSideFiltering) }}",
+    "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( //Find_users1.data?.length > 1? '' : Find_users1.data[0]._id))(Select_cubee.options, Select_cubee.serverSideFiltering) }}",
     "animateLoading": true,
     "leftColumn": 0,
     "dynamicBindingPathList": [

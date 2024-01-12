@@ -8,8 +8,8 @@
         "paragraph",
         "label"
     ],
-    "topRow": 34,
-    "bottomRow": 38,
+    "topRow": 35,
+    "bottomRow": 39,
     "parentRowSpace": 10,
     "type": "TEXT_WIDGET",
     "hideCard": false,
@@ -19,7 +19,7 @@
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "parentColumnSpace": 14.34375,
     "dynamicTriggerPathList": [],
-    "leftColumn": 28,
+    "leftColumn": 12,
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
         {"key": "fontFamily"},

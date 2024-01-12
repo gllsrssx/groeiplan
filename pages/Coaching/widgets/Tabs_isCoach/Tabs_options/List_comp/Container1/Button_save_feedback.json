@@ -3,7 +3,7 @@
     "boxShadow": "none",
     "mobileBottomRow": 29,
     "widgetName": "Button_save_feedback",
-    "onClick": "{{\nstoreValue('coachEvaluation', [...List_comp.currentItemsView.map(item => ({\n  competenceId: item.Text_comp_id.text,\n  feedback: item.Input_feedback.text,\n\tsmart: item.Input_smart.text,\n\tscore: item.Input_score.text,\n  userId: Select_cubee.selectedOptionValue,\n  coachId: appsmith.store.user._id,\n  writer: appsmith.store.user._id,\n  date: {\n    \"$date\": new Date().toISOString()\n  }\n}))]).then(() => {\n  save_evaluation.run();\n}).then(() => {\n\tshowAlert('saved', 'success');\nnavigateTo('Home');\n});}}",
+    "onClick": "{{\nstoreValue('coachEvaluation', [...List_comp.currentItemsView.map(item => ({\n\tcompetenceId: item.Text_comp_id.text,\n\tfeedback: item.Input_feedback.text,\n\tsmart: item.Input_smart.text,\n\tscore: item.Input_score.text,\n\tuserId: Select_cubee.selectedOptionValue,\n\tcoachId: appsmith.store.user._id,\n\twriter: appsmith.store.user._id,\n\tdate: {\n\t\t\"$date\": new Date().toISOString()\n\t}\n}))]).then(() => {\n\tsave_evaluation.run();\n}).then(() => {\n\tshowAlert('saved', 'success');\n\tnavigateTo('Home');\n});}}",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "dynamicPropertyPathList": [
         {"key": "isVisible"},

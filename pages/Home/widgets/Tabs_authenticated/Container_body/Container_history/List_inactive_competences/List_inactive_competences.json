@@ -4,7 +4,7 @@
     "isCanvas": true,
     "templateHeight": 160,
     "iconSVG": "/static/media/icon.5c9511142b3624c7491c5442e8ccd0ef.svg",
-    "topRow": 17,
+    "topRow": 11,
     "pageSize": 2,
     "type": "LIST_WIDGET_V2",
     "itemSpacing": 8,
@@ -75,7 +75,7 @@
     "isLoading": false,
     "mainCanvasId": "6mg1mvdk6s",
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "originalBottomRow": 51,
+    "originalBottomRow": 57,
     "additionalStaticProps": [
         "level",
         "levelData",
@@ -88,7 +88,7 @@
     "widgetName": "List_inactive_competences",
     "listData": "{{get_inactive_competences.data}}",
     "displayName": "List",
-    "bottomRow": 57,
+    "bottomRow": 51,
     "parentRowSpace": 10,
     "hideCard": false,
     "mobileRightColumn": 35,
@@ -108,7 +108,7 @@
     "renderMode": "CANVAS",
     "mobileTopRow": 11,
     "responsiveBehavior": "fill",
-    "originalTopRow": 11,
+    "originalTopRow": 17,
     "mobileLeftColumn": 11,
     "selectedItemView": "{{{}}}"
 }

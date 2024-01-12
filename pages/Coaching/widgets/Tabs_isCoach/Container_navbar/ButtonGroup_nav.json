@@ -121,7 +121,7 @@
         {"key": "groupButtons.groupButtonimbbke7ehc.onClick"},
         {"key": "groupButtons.groupButton2.onClick"}
     ],
-    "leftColumn": 29,
+    "leftColumn": 31,
     "dynamicBindingPathList": [
         {"key": "borderRadius"},
         {"key": "groupButtons.groupButton1.buttonColor"},

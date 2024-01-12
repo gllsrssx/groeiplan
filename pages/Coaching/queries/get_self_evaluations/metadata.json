@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "Find_competences1",
+    "name": "get_self_evaluations",
     "datasource": {
       "name": "GAP",
       "pluginId": "mongo-plugin",
@@ -28,11 +28,8 @@
             "data": ""
           }
         },
-        "body": {
-          "data": "{\n  \"find\": \"competences\",\n  \"filter\": {{{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t|| \"0\"\n}}},\n  \"sort\": {\n  status : 1,\n  name : -1\n},\n  \"skip\": {{Table_competences.pageOffset}},\n  \"limit\": {{Table_competences.pageSize}},\n  \"batchSize\": {{Table_competences.pageSize}}\n}\n"
-        },
         "collection": {
-          "data": "competences"
+          "data": "evaluations"
         },
         "command": {
           "data": "FIND"
@@ -60,16 +57,16 @@
         },
         "find": {
           "skip": {
-            "data": "{{Table_competences.pageOffset}}"
+            "data": ""
           },
           "query": {
-            "data": "{{\n{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\n}\n}}"
+            "data": "{{\n{\n\tuserId: Select_cubee.selectedOptionValue,\n\tfeedback: { \"$ne\": \"\" },\n\twriter: Select_cubee.selectedOptionValue\n}\n}}"
           },
           "sort": {
-            "data": "{\n  status : 1,\n  name : -1\n}"
+            "data": ""
           },
           "limit": {
-            "data": "{{Table_competences.pageSize}}"
+            "data": ""
           },
           "projection": {
             "data": ""
@@ -82,7 +79,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {{{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t|| \"0\"\n}}},\n  \"sort\": {\n  status : 1,\n  name : -1\n},\n  \"skip\": {{Table_competences.pageOffset}},\n  \"limit\": {{Table_competences.pageSize}},\n  \"batchSize\": {{Table_competences.pageSize}}\n}\n",
+            "data": "{\n  \"find\": \"evaluations\",\n  \"filter\": {{\n{\n\tuserId: Select_cubee.selectedOptionValue,\n\tfeedback: { \"$ne\": \"\" },\n\twriter: Select_cubee.selectedOptionValue\n}\n}},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -105,34 +102,22 @@
     "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
-        "key": "formData.find.skip.data"
-      },
-      {
         "key": "formData.find.query.data"
-      },
-      {
-        "key": "formData.find.limit.data"
-      },
-      {
-        "key": "formData.body.data"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "\n{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\n}\n",
-      "Table_competences.pageOffset",
-      "Table_competences.pageSize",
-      "{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t|| \"0\"\n}"
+      "\n{\n\tuserId: Select_cubee.selectedOptionValue,\n\tfeedback: { \"$ne\": \"\" },\n\twriter: Select_cubee.selectedOptionValue\n}\n"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-12-21T14:05:15Z"
+    "createdAt": "2024-01-12T16:37:53Z"
   },
-  "id": "Coaching_Find_competences1",
+  "id": "Coaching_get_self_evaluations",
   "deleted": false,
-  "gitSyncId": "65815cbedd2bbe1de86cce4d_6584461b496d6514fbe929ea"
+  "gitSyncId": "65815cbedd2bbe1de86cce4d_65a16ae12897a24102bd9489"
 }

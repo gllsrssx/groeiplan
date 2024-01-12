@@ -15,6 +15,7 @@
     "type": "ICON_BUTTON_WIDGET",
     "hideCard": false,
     "mobileRightColumn": 64,
+    "topRowBeforeCollapse": 0,
     "animateLoading": true,
     "dynamicTriggerPathList": [{"key": "onClick"}],
     "leftColumn": 0,
@@ -29,6 +30,7 @@
     "rightColumn": 6,
     "iconName": "cross",
     "widgetId": "t6vhb0oovv",
+    "bottomRowBeforeCollapse": 7,
     "minWidth": 50,
     "isVisible": false,
     "version": 1,
@@ -38,7 +40,9 @@
     "isLoading": false,
     "mobileTopRow": 0,
     "responsiveBehavior": "hug",
+    "originalTopRow": 0,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 58,
+    "originalBottomRow": 7,
     "buttonVariant": "TERTIARY"
 }
