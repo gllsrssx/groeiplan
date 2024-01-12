@@ -2,6 +2,7 @@
     "boxShadow": "none",
     "mobileBottomRow": 8,
     "widgetName": "Text_comp_desc",
+    "dynamicPropertyPathList": [],
     "displayName": "Text",
     "iconSVG": "/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
     "searchTags": [
@@ -10,7 +11,7 @@
         "label"
     ],
     "topRow": 5,
-    "bottomRow": 14,
+    "bottomRow": 15,
     "type": "TEXT_WIDGET",
     "hideCard": false,
     "mobileRightColumn": 24,
@@ -31,14 +32,14 @@
     "text": "{{currentItem.description}}",
     "key": "g1vf2v7pxn",
     "isDeprecated": false,
-    "rightColumn": 25,
+    "rightColumn": 22,
     "textAlign": "LEFT",
     "dynamicHeight": "FIXED",
     "widgetId": "w0kq3k0l9a",
     "minWidth": 450,
     "isVisible": true,
     "fontStyle": "",
-    "textColor": "#231F20",
+    "textColor": "black",
     "version": 1,
     "parentId": "dskl37l8ky",
     "tags": [

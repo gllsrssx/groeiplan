@@ -10,15 +10,14 @@
     "leftColumn": 0,
     "dynamicBindingPathList": [
         {"key": "borderRadius"},
-        {"key": "boxShadow"},
-        {"key": "isVisible"}
+        {"key": "boxShadow"}
     ],
     "children": [{
         "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
         "widgetName": "Canvas7",
         "displayName": "Canvas",
         "topRow": 0,
-        "bottomRow": 520,
+        "bottomRow": 380,
         "parentRowSpace": 1,
         "type": "CANVAS_WIDGET",
         "canExtend": false,
@@ -52,7 +51,7 @@
     }],
     "flexVerticalAlignment": "stretch",
     "dynamicHeight": "FIXED",
-    "isVisible": "{{get_evaluations.data.filter(\n    item => item.userId == Select_cubee.selectedOptionValue &&\n            item.writer == item.userId &&\n            item.competenceId == currentItem._id &&\n            new Date(item.date) > new Date(new Date().getTime() - (3 * 7 * 24 * 60 * 60 * 1000))\n  ).length > 0}}",
+    "isVisible": "true",
     "version": 1,
     "isListItemContainer": true,
     "tags": ["Layout"],
@@ -70,7 +69,7 @@
         "parent",
         "group"
     ],
-    "bottomRow": 52,
+    "bottomRow": 36,
     "dragDisabled": true,
     "hideCard": false,
     "shouldScrollContents": false,

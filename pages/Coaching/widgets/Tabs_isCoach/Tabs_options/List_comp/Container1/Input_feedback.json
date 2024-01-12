@@ -36,7 +36,7 @@
         "number",
         "textarea"
     ],
-    "bottomRow": 14,
+    "bottomRow": 15,
     "parentRowSpace": 10,
     "autoFocus": false,
     "hideCard": false,

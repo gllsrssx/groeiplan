@@ -15,7 +15,7 @@
     "hideCard": false,
     "mobileRightColumn": 24,
     "animateLoading": true,
-    "overflow": "TRUNCATE",
+    "overflow": "SCROLL",
     "dynamicTriggerPathList": [],
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "dynamicBindingPathList": [
@@ -31,7 +31,7 @@
     "text": "{{currentItem.feedback}}",
     "key": "oda53wzzcw",
     "isDeprecated": false,
-    "rightColumn": 41,
+    "rightColumn": 52,
     "textAlign": "LEFT",
     "dynamicHeight": "FIXED",
     "widgetId": "5nihho1oic",

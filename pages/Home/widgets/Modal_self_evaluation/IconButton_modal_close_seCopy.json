@@ -1,7 +1,7 @@
 {
     "boxShadow": "none",
     "mobileBottomRow": 4,
-    "widgetName": "IconButton_modal_close_se",
+    "widgetName": "IconButton_modal_close_seCopy",
     "onClick": "{{closeModal('Modal_self_evaluation');}}",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "displayName": "Icon button",
@@ -17,7 +17,7 @@
     "mobileRightColumn": 64,
     "animateLoading": true,
     "dynamicTriggerPathList": [{"key": "onClick"}],
-    "leftColumn": 58,
+    "leftColumn": 0,
     "dynamicBindingPathList": [
         {"key": "buttonColor"},
         {"key": "borderRadius"}
@@ -26,11 +26,11 @@
     "isDisabled": false,
     "key": "u2ydvbf7p2",
     "isDeprecated": false,
-    "rightColumn": 64,
+    "rightColumn": 6,
     "iconName": "cross",
-    "widgetId": "rv67zxci4w",
+    "widgetId": "t6vhb0oovv",
     "minWidth": 50,
-    "isVisible": true,
+    "isVisible": false,
     "version": 1,
     "parentId": "0zn4kjvmln",
     "tags": ["Buttons"],

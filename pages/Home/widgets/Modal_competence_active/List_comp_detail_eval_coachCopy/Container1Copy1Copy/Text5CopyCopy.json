@@ -24,7 +24,7 @@
         {"key": "borderRadius"},
         {"key": "text"}
     ],
-    "leftColumn": 56,
+    "leftColumn": 58,
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
     "text": "{{new Date(currentItem.date).toLocaleDateString('en-GB', {\n  day: '2-digit',\n  month: '2-digit',\n\tyear: '2-digit'\n})}}",

@@ -9,11 +9,12 @@
     "leftColumn": 0,
     "dynamicBindingPathList": [
         {"key": "accentColor"},
-        {"key": "borderRadius"}
+        {"key": "borderRadius"},
+        {"key": "placeholderText"}
     ],
     "labelStyle": "",
     "inputType": "MULTI_LINE_TEXT",
-    "placeholderText": "wat heb je hier voor gedaan en evalueer jezelf",
+    "placeholderText": "{{\"wat heb je hier voor gedaan en evalueer jezelf.\\n\\n\" +currentItem.description}}",
     "isDisabled": false,
     "isRequired": true,
     "dynamicHeight": "AUTO_HEIGHT",
@@ -36,7 +37,7 @@
         "number",
         "textarea"
     ],
-    "bottomRow": 13,
+    "bottomRow": 17,
     "parentRowSpace": 10,
     "autoFocus": false,
     "hideCard": false,

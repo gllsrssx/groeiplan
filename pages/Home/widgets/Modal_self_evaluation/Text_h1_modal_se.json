@@ -9,7 +9,7 @@
         "label"
     ],
     "topRow": 0,
-    "bottomRow": 4,
+    "bottomRow": 7,
     "type": "TEXT_WIDGET",
     "hideCard": false,
     "mobileRightColumn": 41,
@@ -17,7 +17,7 @@
     "overflow": "NONE",
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "dynamicTriggerPathList": [],
-    "leftColumn": 1,
+    "leftColumn": 6,
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
         {"key": "fontFamily"},
@@ -28,8 +28,8 @@
     "text": "Maandelijkse zelfevaluatie",
     "key": "anlmnxaxgv",
     "isDeprecated": false,
-    "rightColumn": 41,
-    "textAlign": "LEFT",
+    "rightColumn": 58,
+    "textAlign": "CENTER",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "0gswcyxjfe",
     "minWidth": 450,
@@ -46,9 +46,11 @@
     "isLoading": false,
     "mobileTopRow": 1,
     "responsiveBehavior": "fill",
+    "originalTopRow": 0,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 1,
     "maxDynamicHeight": 9000,
-    "fontSize": "1.25rem",
+    "originalBottomRow": 7,
+    "fontSize": "3rem",
     "minDynamicHeight": 4
 }

@@ -4,7 +4,7 @@
     "isCanvas": true,
     "templateHeight": 160,
     "iconSVG": "/static/media/icon.5c9511142b3624c7491c5442e8ccd0ef.svg",
-    "topRow": 24,
+    "topRow": 30,
     "pageSize": 1,
     "type": "LIST_WIDGET_V2",
     "itemSpacing": 8,
@@ -76,7 +76,7 @@
     "isLoading": false,
     "mainCanvasId": "l6d4vf31md",
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "originalBottomRow": 41,
+    "originalBottomRow": 47,
     "additionalStaticProps": [
         "level",
         "levelData",
@@ -89,7 +89,7 @@
     "widgetName": "List_comp_detail_evalCopy",
     "listData": "{{\n  get_evaluations.data.filter(item => item.writer === appsmith.store.user._id && item.competenceId === List_active_competences.triggeredItem._id).length < 1 ? \n  [{ _id: 1, \"feedback\": \"Al je ondernomen acties komen hier. Je vult deze in tijdens de zelfevaluatie. \\nJe hebt momenteel nog geen zelfevaluatie voor \" + Text_modal_title_compCopy.text, date:Date() }] : \n  get_evaluations.data.filter(item => item.writer === appsmith.store.user._id && item.competenceId === List_active_competences.triggeredItem._id)\n}}\n",
     "displayName": "List",
-    "bottomRow": 41,
+    "bottomRow": 47,
     "parentRowSpace": 10,
     "hideCard": false,
     "mobileRightColumn": 26,
@@ -108,7 +108,7 @@
     "renderMode": "CANVAS",
     "mobileTopRow": 21,
     "responsiveBehavior": "fill",
-    "originalTopRow": 24,
+    "originalTopRow": 30,
     "mobileLeftColumn": 2,
     "selectedItemView": "{{{}}}"
 }

@@ -45,7 +45,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "{\n\tuserId : appsmith.store.user._id,\n\tstatus: {\n    \"$in\": [\n      1,\n      2\n    ]\n  }\n}\n"
+                "{\n\tuserId : {\n    \"$in\": [\n      appsmith.store.user._id,\n      0\n    ]\n  },\n\tstatus: {\n    \"$in\": [\n      1,\n      2\n    ]\n  }\n}\n"
               ],
               "timeoutInMillisecond": 10000
             },
