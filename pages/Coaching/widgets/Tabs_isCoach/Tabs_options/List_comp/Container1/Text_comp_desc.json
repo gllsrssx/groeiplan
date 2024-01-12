@@ -10,12 +10,12 @@
         "label"
     ],
     "topRow": 5,
-    "bottomRow": 12,
+    "bottomRow": 14,
     "type": "TEXT_WIDGET",
     "hideCard": false,
     "mobileRightColumn": 24,
     "animateLoading": true,
-    "overflow": "TRUNCATE",
+    "overflow": "SCROLL",
     "dynamicTriggerPathList": [],
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "dynamicBindingPathList": [
@@ -31,7 +31,7 @@
     "text": "{{currentItem.description}}",
     "key": "g1vf2v7pxn",
     "isDeprecated": false,
-    "rightColumn": 30,
+    "rightColumn": 25,
     "textAlign": "LEFT",
     "dynamicHeight": "FIXED",
     "widgetId": "w0kq3k0l9a",

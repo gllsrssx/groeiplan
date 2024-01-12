@@ -6,7 +6,7 @@
     "type": "INPUT_WIDGET_V2",
     "animateLoading": true,
     "resetOnSubmit": true,
-    "leftColumn": 32,
+    "leftColumn": 31,
     "dynamicBindingPathList": [
         {"key": "accentColor"},
         {"key": "borderRadius"}
@@ -36,7 +36,7 @@
         "number",
         "textarea"
     ],
-    "bottomRow": 15,
+    "bottomRow": 14,
     "parentRowSpace": 10,
     "autoFocus": false,
     "hideCard": false,

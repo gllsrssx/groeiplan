@@ -76,7 +76,7 @@
     "isLoading": false,
     "mainCanvasId": "ly3ikeaos0",
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "originalBottomRow": 61,
+    "originalBottomRow": 62,
     "additionalStaticProps": [
         "level",
         "levelData",
@@ -87,7 +87,7 @@
     "currentItemsView": "{{[]}}",
     "triggeredItemView": "{{{}}}",
     "widgetName": "List_comp_detail_eval_coachCopy",
-    "listData": "{{\nget_evaluations.data.filter(item => item.writer == item.coachId && item.competenceId === List_active_competences.triggeredItem._id)\n}}",
+    "listData": "{{\nget_evaluations.data.filter(item => item.writer == item.coachId && item.competenceId === List_active_competences.triggeredItem._id).length > 0 ? get_evaluations.data.filter(item => item.writer == item.coachId && item.competenceId === List_active_competences.triggeredItem._id) : [{_id:1,date: Date(), feedback: \"Hier komt alle feedback van je coach over \"+Text_modal_title_compCopy.text+\". \\nJe hebt nog geen feedback van je coach gekregen. \\nDoe eerst een evaluatiemoment\"}]\n}}",
     "displayName": "List",
     "bottomRow": 62,
     "parentRowSpace": 10,
@@ -108,7 +108,7 @@
     "renderMode": "CANVAS",
     "mobileTopRow": 21,
     "responsiveBehavior": "fill",
-    "originalTopRow": 44,
+    "originalTopRow": 45,
     "mobileLeftColumn": 2,
     "selectedItemView": "{{{}}}"
 }

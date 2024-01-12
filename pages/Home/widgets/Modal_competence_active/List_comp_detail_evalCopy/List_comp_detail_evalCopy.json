@@ -76,7 +76,7 @@
     "isLoading": false,
     "mainCanvasId": "l6d4vf31md",
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "originalBottomRow": 40,
+    "originalBottomRow": 41,
     "additionalStaticProps": [
         "level",
         "levelData",
@@ -87,7 +87,7 @@
     "currentItemsView": "{{[]}}",
     "triggeredItemView": "{{{}}}",
     "widgetName": "List_comp_detail_evalCopy",
-    "listData": "{{\n  get_evaluations.data.filter(item => item.writer === appsmith.store.user._id && item.competenceId === List_active_competences.triggeredItem._id).length < 1 ? \n  [{ _id: 1, \"feedback\": \"nog geen ondernomen acties ingevuld. \\nDit komt na de zelfevaluatie\", date:Date() }] : \n  get_evaluations.data.filter(item => item.writer === appsmith.store.user._id && item.competenceId === List_active_competences.triggeredItem._id)\n}}\n",
+    "listData": "{{\n  get_evaluations.data.filter(item => item.writer === appsmith.store.user._id && item.competenceId === List_active_competences.triggeredItem._id).length < 1 ? \n  [{ _id: 1, \"feedback\": \"Al je ondernomen acties komen hier. Je vult deze in tijdens de zelfevaluatie. \\nJe hebt momenteel nog geen zelfevaluatie voor \" + Text_modal_title_compCopy.text, date:Date() }] : \n  get_evaluations.data.filter(item => item.writer === appsmith.store.user._id && item.competenceId === List_active_competences.triggeredItem._id)\n}}\n",
     "displayName": "List",
     "bottomRow": 41,
     "parentRowSpace": 10,
@@ -108,7 +108,7 @@
     "renderMode": "CANVAS",
     "mobileTopRow": 21,
     "responsiveBehavior": "fill",
-    "originalTopRow": 23,
+    "originalTopRow": 24,
     "mobileLeftColumn": 2,
     "selectedItemView": "{{{}}}"
 }

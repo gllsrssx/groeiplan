@@ -1,15 +1,16 @@
 {
     "boxShadow": "none",
     "iconSVG": "/static/media/icon.f2c34197dbcf03595098986de898928f.svg",
-    "topRow": 15,
+    "topRow": 14,
     "labelWidth": 5,
     "type": "INPUT_WIDGET_V2",
     "animateLoading": true,
     "resetOnSubmit": true,
-    "leftColumn": 32,
+    "leftColumn": 31,
     "dynamicBindingPathList": [
         {"key": "accentColor"},
-        {"key": "borderRadius"}
+        {"key": "borderRadius"},
+        {"key": "isVisible"}
     ],
     "labelStyle": "",
     "inputType": "MULTI_LINE_TEXT",
@@ -19,7 +20,7 @@
     "dynamicHeight": "AUTO_HEIGHT",
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
     "showStepArrows": false,
-    "isVisible": true,
+    "isVisible": "{{currentItem.userId != 0}}",
     "version": 2,
     "tags": [
         "Suggested",
@@ -29,6 +30,7 @@
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileBottomRow": 20,
     "widgetName": "Input_smart",
+    "dynamicPropertyPathList": [{"key": "isVisible"}],
     "displayName": "Input",
     "searchTags": [
         "form",
@@ -36,7 +38,7 @@
         "number",
         "textarea"
     ],
-    "bottomRow": 26,
+    "bottomRow": 28,
     "parentRowSpace": 10,
     "autoFocus": false,
     "hideCard": false,

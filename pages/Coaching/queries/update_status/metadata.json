@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "update_focus",
+    "name": "update_status",
     "datasource": {
       "name": "GAP",
       "pluginId": "mongo-plugin",
@@ -79,7 +79,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"update\": \"competences\",\n  \"updates\": [{\n    \"q\": {\"_id\": ObjectId('{{Text_comp_id.text}}')},\n    \"u\": {\"$set\": {\n    \"status\": {{Switch_focus.isSwitchedOn?1:2}}\n  }},\n    \"multi\": false,\n  }]\n}\n",
+            "data": "{\n  \"update\": \"competences\",\n  \"updates\": [{\n    \"q\": {\"_id\": ObjectId('{{Text_comp_id.text}}')},\n    \"u\": {\n  \"$set\": {\n    \"status\": {{ Select_status.selectedOptionValue >= 1 && Select_status.selectedOptionValue <= 4 ? Select_status.selectedOptionValue : 2 }}\n  }\n}\n,\n    \"multi\": false,\n  }]\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -94,7 +94,7 @@
             "data": "{\"_id\": ObjectId('{{Text_comp_id.text}}')}"
           },
           "update": {
-            "data": "{\"$set\": {\n    \"status\": {{Switch_focus.isSwitchedOn?1:2}}\n  }}"
+            "data": "{\n  \"$set\": {\n    \"status\": {{ Select_status.selectedOptionValue >= 1 && Select_status.selectedOptionValue <= 4 ? Select_status.selectedOptionValue : 2 }}\n  }\n}\n"
           }
         }
       }
@@ -112,7 +112,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Switch_focus.isSwitchedOn?1:2",
+      " Select_status.selectedOptionValue >= 1 && Select_status.selectedOptionValue <= 4 ? Select_status.selectedOptionValue : 2 ",
       "Text_comp_id.text"
     ],
     "userSetOnLoad": false,
@@ -121,7 +121,7 @@
     "userPermissions": [],
     "createdAt": "2023-12-22T11:18:12Z"
   },
-  "id": "Coaching_update_focus",
+  "id": "Coaching_update_status",
   "deleted": false,
   "gitSyncId": "65815cbedd2bbe1de86cce4d_65857074496d6514fbe92a05"
 }
