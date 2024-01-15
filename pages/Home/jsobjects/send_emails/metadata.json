@@ -1,0 +1,40 @@
+{
+  "unpublishedCollection": {
+    "name": "send_emails",
+    "pageId": "Home",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "now",
+        "value": "''"
+      },
+      {
+        "name": "userId",
+        "value": "''"
+      },
+      {
+        "name": "userName",
+        "value": "''"
+      },
+      {
+        "name": "userMail",
+        "value": "''"
+      },
+      {
+        "name": "subject",
+        "value": "''"
+      },
+      {
+        "name": "message",
+        "value": "''"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Home_send_emails",
+  "deleted": false,
+  "gitSyncId": "65815cbedd2bbe1de86cce4d_659d1ee5496d6514fbe92a36"
+}

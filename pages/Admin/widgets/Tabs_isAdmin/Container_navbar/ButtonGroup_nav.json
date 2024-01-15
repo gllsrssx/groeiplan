@@ -1,0 +1,152 @@
+{
+    "boxShadow": "none",
+    "mobileBottomRow": 4,
+    "widgetName": "ButtonGroup_nav",
+    "isCanvas": false,
+    "dynamicPropertyPathList": [
+        {"key": "groupButtons.groupButtonimbbke7ehc.isVisible"},
+        {"key": "groupButtons.groupButton2.isVisible"}
+    ],
+    "displayName": "Button Group",
+    "iconSVG": "/static/media/icon.bb8db4853027d74a78963c3375841e4b.svg",
+    "searchTags": [
+        "click",
+        "submit"
+    ],
+    "topRow": 1,
+    "bottomRow": 5,
+    "parentRowSpace": 10,
+    "type": "BUTTON_GROUP_WIDGET",
+    "groupButtons": {
+        "groupButtonimbbke7ehc": {
+            "onClick": "{{navigateTo('Coaching', {}, 'SAME_WINDOW');}}",
+            "buttonType": "SIMPLE",
+            "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+            "iconName": "chat",
+            "widgetId": "sygn5caie5",
+            "menuItems": {},
+            "index": 1,
+            "id": "groupButtonimbbke7ehc",
+            "label": "Coaching",
+            "isDisabled": false,
+            "isVisible": "{{\n\tappsmith.store.user?.coachId? true: false\n}}",
+            "placement": "CENTER"
+        },
+        "groupButton3": {
+            "onClick": "{{clearStore().then(() => {\n  navigateTo('Home', {}, 'SAME_WINDOW');\n});}}",
+            "buttonType": "SIMPLE",
+            "iconName": "heart-broken",
+            "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+            "widgetId": "",
+            "menuItems": {
+                "menuItem1": {
+                    "backgroundColor": "#FFFFFF",
+                    "onClick": "",
+                    "widgetId": "",
+                    "index": 0,
+                    "label": "First Option",
+                    "id": "menuItem1",
+                    "isVisible": true,
+                    "isDisabled": false
+                },
+                "menuItem3": {
+                    "backgroundColor": "#DD4B34",
+                    "onClick": "",
+                    "iconName": "trash",
+                    "widgetId": "",
+                    "iconColor": "#FFFFFF",
+                    "iconAlign": "right",
+                    "index": 2,
+                    "label": "Delete",
+                    "id": "menuItem3",
+                    "isVisible": true,
+                    "isDisabled": false,
+                    "textColor": "#FFFFFF"
+                },
+                "menuItem2": {
+                    "backgroundColor": "#FFFFFF",
+                    "onClick": "",
+                    "widgetId": "",
+                    "index": 1,
+                    "label": "Second Option",
+                    "id": "menuItem2",
+                    "isVisible": true,
+                    "isDisabled": false
+                }
+            },
+            "index": 3,
+            "label": "Logout",
+            "id": "groupButton3",
+            "placement": "CENTER",
+            "isVisible": true,
+            "isDisabled": false
+        },
+        "groupButton1": {
+            "onClick": "{{navigateTo('Admin', {}, 'SAME_WINDOW');}}",
+            "iconName": "build",
+            "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+            "widgetId": "",
+            "menuItems": {},
+            "index": 2,
+            "label": "Admin",
+            "isVisible": false,
+            "buttonType": "SIMPLE",
+            "iconAlign": "left",
+            "id": "groupButton1",
+            "placement": "CENTER",
+            "isDisabled": false
+        },
+        "groupButton2": {
+            "onClick": "{{navigateTo('Home', {}, 'SAME_WINDOW');}}",
+            "buttonType": "SIMPLE",
+            "iconName": "flag",
+            "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+            "widgetId": "",
+            "menuItems": {},
+            "index": 0,
+            "label": "Home",
+            "id": "groupButton2",
+            "placement": "CENTER",
+            "isVisible": "{{ \n\t!appsmith.URL.pathname.includes('home') \n}}\n",
+            "isDisabled": false
+        }
+    },
+    "hideCard": false,
+    "mobileRightColumn": 62,
+    "animateLoading": true,
+    "parentColumnSpace": 12.421875,
+    "dynamicTriggerPathList": [
+        {"key": "groupButtons.groupButton3.onClick"},
+        {"key": "groupButtons.groupButton1.onClick"},
+        {"key": "groupButtons.groupButtonimbbke7ehc.onClick"},
+        {"key": "groupButtons.groupButton2.onClick"}
+    ],
+    "leftColumn": 29,
+    "dynamicBindingPathList": [
+        {"key": "borderRadius"},
+        {"key": "groupButtons.groupButton1.buttonColor"},
+        {"key": "groupButtons.groupButton2.buttonColor"},
+        {"key": "groupButtons.groupButton3.buttonColor"},
+        {"key": "groupButtons.groupButtonimbbke7ehc.buttonColor"},
+        {"key": "groupButtons.groupButtonimbbke7ehc.isVisible"},
+        {"key": "groupButtons.groupButton2.isVisible"}
+    ],
+    "key": "93hpmupf5b",
+    "orientation": "horizontal",
+    "isDeprecated": false,
+    "rightColumn": 63,
+    "widgetId": "vowfdargxu",
+    "minWidth": 450,
+    "isVisible": true,
+    "version": 1,
+    "parentId": "xfktuqn7ku",
+    "tags": ["Buttons"],
+    "renderMode": "CANVAS",
+    "isLoading": false,
+    "mobileTopRow": 0,
+    "responsiveBehavior": "fill",
+    "childStylesheet": {"button": {"buttonColor": "{{appsmith.theme.colors.primaryColor}}"}},
+    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "mobileLeftColumn": 38,
+    "buttonVariant": "PRIMARY"
+}

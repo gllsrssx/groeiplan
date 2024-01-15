@@ -1,0 +1,77 @@
+{
+  "unpublishedPage": {
+    "name": "Admin",
+    "slug": "admin",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 4896,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 450,
+          "containerStyle": "none",
+          "snapRows": 124,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 87,
+          "minHeight": 1292,
+          "dynamicTriggerPathList": [],
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Admin_Find_users1",
+              "name": "Find_users1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                " Table1.sortOrder.column ? { [Table1.sortOrder.column]: Table1.sortOrder.order !== \"desc\" ? 1 : -1 } : {}",
+                "{ name: {$regex: Table_users.searchText, '$options' : 'i'} }",
+                "Table_users.pageSize",
+                "{ name: {$regex: Table1.searchText, '$options' : 'i'} }",
+                "Table1.pageSize",
+                " Table_users.sortOrder.column ? { [Table_users.sortOrder.column]: Table_users.sortOrder.order !== \"desc\" ? 1 : -1 } : {}",
+                "Table1.pageOffset",
+                "Table_users.pageOffset"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Admin_Total_record_users1",
+              "name": "Total_record_users1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "{ name: {$regex: Table1.searchText} }",
+                "{ name: {$regex: Table_users.searchText} }"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Admin",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": true
+  },
+  "deleted": false,
+  "gitSyncId": "657c79e6dd2bbe1de86cce38_657c79e7dd2bbe1de86cce3a"
+}

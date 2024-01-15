@@ -1,0 +1,125 @@
+{
+  "unpublishedPage": {
+    "name": "Coaching",
+    "slug": "coaching",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 2850,
+          "containerStyle": "none",
+          "snapRows": 68,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 87,
+          "minHeight": 700,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Coaching_Find_competences1",
+              "name": "Find_competences1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Table_competences.pageOffset",
+                "{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\t|| \"0\"\n}",
+                "Table_competences.pageSize",
+                "\n{ \n\tname: {$regex: Table_competences.searchText, '$options' : 'i'},\n\tuserId : Select_cubee.selectedOptionValue\n}\n"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Coaching_JSObject_run_gets.myFun1",
+              "name": "JSObject_run_gets.myFun1",
+              "collectionId": "Coaching_JSObject_run_gets",
+              "clientSideExecution": true,
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function () {\n  get_active_competences.run();\n  get_inactive_competences.run();\n  Find_competences1.run();\n  get_self_evaluations.run();\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Coaching_get_active_competences",
+              "name": "get_active_competences",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                " Select_cubee.selectedOptionValue "
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Coaching_Find_users1",
+              "name": "Find_users1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "{ \n\tname: {$regex: Select_cubee.filterText, '$options' : 'i'},\n\tcoachId: appsmith.store.user._id\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Coaching_Total_record_competences1",
+              "name": "Total_record_competences1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "{ name: {$regex: Table_competences.searchText} }"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Coaching_get_evaluations",
+              "name": "get_evaluations",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "\n{\n\tuserId: Select_cubee.selectedOptionValue,\n\tfeedback: { \"$ne\": \"\" }\n}\n"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Coaching_get_self_evaluations",
+              "name": "get_self_evaluations",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "\n{\n\tuserId: Select_cubee.selectedOptionValue,\n\tfeedback: { \"$ne\": \"\" },\n\twriter: Select_cubee.selectedOptionValue\n}\n"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Coaching",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": true
+  },
+  "deleted": false,
+  "gitSyncId": "65815cbedd2bbe1de86cce4d_65841af1496d6514fbe929d1"
+}

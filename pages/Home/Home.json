@@ -1,0 +1,146 @@
+{
+  "unpublishedPage": {
+    "name": "Home",
+    "slug": "home",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 1620,
+          "containerStyle": "none",
+          "snapRows": 70,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 87,
+          "minHeight": 720,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Home_Api_continue_google_login",
+              "name": "Api_continue_google_login",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.code"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Home_get_active_competences",
+              "name": "get_active_competences",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "{\n\tuserId : {\n    \"$in\": [\n      appsmith.store.user._id,\n      0\n    ]\n  },\n\tstatus: {\n    \"$in\": [\n      1,\n      2\n    ]\n  }\n}\n"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Home_get_inactive_competences",
+              "name": "get_inactive_competences",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "\n{\n\tuserId: appsmith.store.user._id,\n\tstatus: 3\n}\n"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Home_get_users",
+              "name": "get_users",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Home_get_evaluations",
+              "name": "get_evaluations",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                " appsmith.store.user._id "
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Home_send_emails.sendEmailToUsers",
+              "name": "send_emails.sendEmailToUsers",
+              "collectionId": "Home_send_emails",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function () {\n  const delay = 1000 * 60 * 60 * 24 * 5;\n  const now = new Date();\n  for (const user of get_users.data) {\n    send_emails.now = now.toISOString();\n    send_emails.userId = user._id;\n    send_emails.userName = user.name;\n    send_emails.userMail = user.email;\n    send_emails.subject = 'GAP TIME!';\n    const lastEmailSent = new Date(user.lastEmailSent);\n    const calc = now - lastEmailSent;\n    if (calc <= delay) {\n      console.log(`Skipping email to ${send_emails.userName} - last email sent recently.`);\n      continue;\n    }\n    send_emails.message = `\n\t\t\t\thi, ${user.name}\n\t\t\t\ttest bericht, hallo ik ben automated,\n\t\t\t\tzie je terug binnen 5 dagen.\n\n\t\t\t\tGAP @ ${appsmith.URL.fullPath}\n\t\t\t\t`;\n    update_mail_delay.run();\n    try {\n      await send_email.run();\n      console.log(`Email sent to ${send_emails.userName}`);\n    } catch (error) {\n      console.error(`Failed to send email to ${user.email}: ${error}`);\n    }\n  }\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Home_JSObject_login.executeInOrder",
+              "name": "JSObject_login.executeInOrder",
+              "collectionId": "Home_JSObject_login",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function () {\n  await JSObject_login.saveUser();\n  await JSObject_login.getUser();\n  await JSObject_login.storeUser();\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Home_get_general_evaluations",
+              "name": "get_general_evaluations",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "\n{\n\t\"userId\": appsmith.store.user._id,\n\t\"feedback\": { \"$ne\": \"\" },\n\t\"competenceId\": get_active_competences.data.filter(item => item.userId == 0)[0]._id\n}\n"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Home_get_user_api",
+              "name": "get_user_api",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Api_continue_google_login.data.email"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Home",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": true
+  },
+  "deleted": false,
+  "gitSyncId": "65815cbedd2bbe1de86cce4d_65815dc1dd2bbe1de86cce51"
+}
