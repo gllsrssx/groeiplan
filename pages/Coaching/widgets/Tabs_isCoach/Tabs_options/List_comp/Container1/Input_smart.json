@@ -62,6 +62,6 @@
     "maxDynamicHeight": 9000,
     "shouldAllowAutofill": false,
     "iconAlign": "left",
-    "defaultText": "",
+    "defaultText": "S: \nM: \nA: \nR: \nT: ",
     "minDynamicHeight": 4
 }

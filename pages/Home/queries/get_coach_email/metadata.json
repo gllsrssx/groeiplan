@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "get_general_evaluations",
+    "name": "get_coach_email",
     "datasource": {
       "name": "GAP",
       "pluginId": "mongo-plugin",
@@ -29,7 +29,7 @@
           }
         },
         "collection": {
-          "data": "evaluations"
+          "data": "users"
         },
         "command": {
           "data": "FIND"
@@ -56,14 +56,14 @@
           }
         },
         "find": {
-          "query": {
-            "data": "{{\n{\n\t\"userId\": appsmith.store.user._id,\n\t\"feedback\": { \"$ne\": \"\" },\n\t\"competenceId\": get_active_competences.data.filter(item => item.userId == 0)[0]._id\n}\n}}\n"
-          },
           "skip": {
             "data": ""
           },
+          "query": {
+            "data": "{_id: {{send_emails.coachId}}}"
+          },
           "sort": {
-            "data": "{date : 1}"
+            "data": ""
           },
           "limit": {
             "data": ""
@@ -79,7 +79,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"evaluations\",\n  \"filter\": {{\n{\n\t\"userId\": appsmith.store.user._id,\n\t\"feedback\": { \"$ne\": \"\" },\n\t\"competenceId\": get_active_competences.data.filter(item => item.userId == 0)[0]._id\n}\n}}\n,\n  \"sort\": {date : 1},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
+            "data": "{\n  \"find\": \"users\",\n  \"filter\": {_id: {{send_emails.coachId}}},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -109,15 +109,15 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "\n{\n\t\"userId\": appsmith.store.user._id,\n\t\"feedback\": { \"$ne\": \"\" },\n\t\"competenceId\": get_active_competences.data.filter(item => item.userId == 0)[0]._id\n}\n"
+      "send_emails.coachId"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2024-01-12T15:09:55Z"
+    "createdAt": "2024-01-16T15:34:37Z"
   },
-  "id": "Home_get_general_evaluations",
+  "id": "Home_get_coach_email",
   "deleted": false,
-  "gitSyncId": "65815cbedd2bbe1de86cce4d_65a156432897a24102bd9461"
+  "gitSyncId": "65815cbedd2bbe1de86cce4d_65a6a20dfe0417026fa6b046"
 }

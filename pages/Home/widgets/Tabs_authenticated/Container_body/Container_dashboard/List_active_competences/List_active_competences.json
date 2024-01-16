@@ -75,7 +75,7 @@
     "isLoading": false,
     "mainCanvasId": "qdpfqq9f5c",
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "originalBottomRow": 56,
+    "originalBottomRow": 58,
     "additionalStaticProps": [
         "level",
         "levelData",
@@ -86,7 +86,8 @@
     "currentItemsView": "{{[]}}",
     "triggeredItemView": "{{{}}}",
     "widgetName": "List_active_competences",
-    "listData": "{{get_active_competences.data}}",
+    "listData": "{{get_active_competences.data.filter(item => item.userId != 0)}}",
+    "dynamicPropertyPathList": [],
     "displayName": "List",
     "bottomRow": 56,
     "parentRowSpace": 10,
@@ -108,7 +109,7 @@
     "renderMode": "CANVAS",
     "mobileTopRow": 11,
     "responsiveBehavior": "fill",
-    "originalTopRow": 11,
+    "originalTopRow": 13,
     "mobileLeftColumn": 11,
     "selectedItemView": "{{{}}}"
 }

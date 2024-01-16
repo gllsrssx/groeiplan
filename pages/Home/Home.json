@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1620,
+          "bottomRow": 1420,
           "containerStyle": "none",
           "snapRows": 70,
           "parentRowSpace": 1,
@@ -70,6 +70,36 @@
           ],
           [
             {
+              "id": "Home_get_all_competences",
+              "name": "get_all_competences",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "{\n\tuserId : {\n    \"$in\": [\n      appsmith.store.user._id,\n      0\n    ]\n  }\n}\n"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Home_get_all_evaluations",
+              "name": "get_all_evaluations",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "\n{\n\tuserId: send_emails.userId,\n\tfeedback: { \"$ne\": \"\" }\n}\n"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Home_get_coach_email",
+              "name": "get_coach_email",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "send_emails.coachId"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Home_get_evaluations",
               "name": "get_evaluations",
               "confirmBeforeExecute": false,
@@ -88,7 +118,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async function () {\n  const delay = 1000 * 60 * 60 * 24 * 5;\n  const now = new Date();\n  for (const user of get_users.data) {\n    send_emails.now = now.toISOString();\n    send_emails.userId = user._id;\n    send_emails.userName = user.name;\n    send_emails.userMail = user.email;\n    send_emails.subject = 'GAP TIME!';\n    const lastEmailSent = new Date(user.lastEmailSent);\n    const calc = now - lastEmailSent;\n    if (calc <= delay) {\n      console.log(`Skipping email to ${send_emails.userName} - last email sent recently.`);\n      continue;\n    }\n    send_emails.message = `\n\t\t\t\thi, ${user.name}\n\t\t\t\ttest bericht, hallo ik ben automated,\n\t\t\t\tzie je terug binnen 5 dagen.\n\n\t\t\t\tGAP @ ${appsmith.URL.fullPath}\n\t\t\t\t`;\n    update_mail_delay.run();\n    try {\n      await send_email.run();\n      console.log(`Email sent to ${send_emails.userName}`);\n    } catch (error) {\n      console.error(`Failed to send email to ${user.email}: ${error}`);\n    }\n  }\n}"
+                "async function () {\n  const userDelay = 1000 * 60 * 60 * 24 * 14;\n  const coachDelay = 1000 * 60 * 60 * 24 * 21;\n  const now = new Date();\n  for (const user of get_users.data) {\n    send_emails.now = now.toISOString();\n    send_emails.userId = user._id;\n    send_emails.userName = user.name;\n    send_emails.userMail = user.email;\n    send_emails.subject = 'GAP TIJD!';\n    send_emails.coachId = user.coachId;\n    const lastEmailSent = new Date(user.lastEmailSent);\n    const calc = now - lastEmailSent;\n    if (calc <= userDelay) {\n      console.log(`Overgeslagen e-mail naar ${send_emails.userName} - laatste e-mail recentelijk verzonden.`);\n      continue;\n    }\n    let message = '';\n    const userEvaluations = get_all_evaluations.data.filter(evaluation => evaluation.userId === user._id);\n    const lastUserEvaluation = userEvaluations.find(evaluation => evaluation.writer === user._id);\n    const lastCoachEvaluation = userEvaluations.find(evaluation => evaluation.writer === user.coachId);\n    if (lastUserEvaluation && now - new Date(lastUserEvaluation.date) > userDelay) {\n      message += `We missen je in de GAP! Het is al een tijdje geleden dat je een zelfevaluatie hebt gedaan. Vergeet niet om je voortgang te controleren!\\n\\n`;\n    }\n    if (lastCoachEvaluation && now - new Date(lastCoachEvaluation.date) < coachDelay) {\n      message += `Goed nieuws, ${user.name}!\\n\\nJe coach heeft onlangs een evaluatie voor je voltooid. Neem even de tijd om de feedback te bekijken en ontdek nieuwe manieren om te groeien!\\n\\n`;\n    }\n    if (lastCoachEvaluation && lastCoachEvaluation.feedback) {\n      message += `Hier is de laatste feedback die je hebt ontvangen:\\n\\n${lastCoachEvaluation.feedback}\\n\\n`;\n    }\n    send_emails.message = `Hey ${user.name},\\n\\nWe hebben gemerkt dat het alweer een week geleden is dat we voor het laatst contact hebben gehad in de GAP! We hopen dat je alles vindt wat je nodig hebt voor je groeireis.\\n\\n${message}Vergeet niet om je groeiplan te bekijken voor de laatste updates en activiteiten. Onthoud, we zijn hier om je te ondersteunen, dus als je vragen of feedback hebt, aarzel dan niet om contact met ons op te nemen.\\n\\nWe kunnen niet wachten om je groei te zien stijgen!\\n\\nMet vriendelijke groet,\\nHet GAP Team\\n\\nGAP @ ${appsmith.URL.fullPath}`;\n    update_mail_delay.run();\n    try {\n      await send_email.run();\n      console.log(`E-mail verzonden naar ${send_emails.userName}`);\n    } catch (error) {\n      console.error(`Het verzenden van de e-mail naar ${user.email} is mislukt: ${error}`);\n    }\n    if (lastUserEvaluation && !lastCoachEvaluation && now - new Date(lastUserEvaluation.date) <= userDelay) {\n      const coachInfo = get_coach_email.data[0];\n      send_emails.userMail = coachInfo.email;\n      send_emails.subject = 'Dringend: Evaluatieverzoek';\n      send_emails.message = `Beste ${coachInfo.name},\\n\\n${send_emails.userName} heeft onlangs een zelfevaluatie voltooid en wacht vol spanning op jouw feedback. Neem alsjeblieft even de tijd om de evaluatie zo snel mogelijk te verstrekken.\\n\\nMet vriendelijke groet,\\nHet GAP Team`;\n      try {\n        await send_email.run();\n        console.log(`Herinneringsmail verzonden naar coach ${coachInfo.email}`);\n      } catch (error) {\n        console.error(`Het verzenden van de herinneringsmail naar coach ${coachInfo.email} is mislukt: ${error}`);\n      }\n    }\n  }\n}"
               ],
               "timeoutInMillisecond": 10000
             }
@@ -101,7 +131,20 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async function () {\n  await JSObject_login.saveUser();\n  await JSObject_login.getUser();\n  await JSObject_login.storeUser();\n}"
+                "async function () {\n  await JSObject_login.saveUser();\n  await JSObject_login.getUser();\n  await JSObject_login.storeUser();\n  showAlert('Je kan op de kaartjes klikken om meer info te zien!', 'info');\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Home_get_eval_from_date",
+              "name": "get_eval_from_date",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.store.user._id",
+                "List_last_general_feedback.triggeredItem.date"
               ],
               "timeoutInMillisecond": 10000
             }
