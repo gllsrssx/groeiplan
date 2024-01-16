@@ -30,6 +30,10 @@
       {
         "name": "message",
         "value": "''"
+      },
+      {
+        "name": "coachId",
+        "value": "''"
       }
     ],
     "userPermissions": []

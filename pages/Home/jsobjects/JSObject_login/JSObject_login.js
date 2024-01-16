@@ -18,5 +18,6 @@ export default {
 		await this.saveUser();
 		await this.getUser();
 		await this.storeUser();
+		showAlert('Je kan op de kaartjes klikken om meer info te zien!', 'info');
 	}
 }

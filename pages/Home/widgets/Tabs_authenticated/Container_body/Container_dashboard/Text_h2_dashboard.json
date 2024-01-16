@@ -27,7 +27,7 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "Dit is een overzicht van je actieve competenties",
+    "text": "Dit is een overzicht van je actieve competenties, ",
     "key": "oda53wzzcw",
     "isDeprecated": false,
     "rightColumn": 64,
@@ -52,7 +52,7 @@
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 23,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 11,
+    "originalBottomRow": 13,
     "fontSize": "1.25rem",
     "minDynamicHeight": 4
 }
